@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tileset version="1.2" tiledversion="1.2.4" name="SMBWorld1Map" tilewidth="18" tileheight="18" tilecount="90" columns="10">
- <image source="../../../../../VGPROTO/Day13Files(Mario)/SMBWorld1Map.png" trans="ffffff" width="193" height="173"/>
+ <image source="SMBWorld1Map.png" trans="ffffff" width="193" height="173"/>
  <tile id="0">
   <animation>
    <frame tileid="0" duration="450"/>
