@@ -1,9 +1,9 @@
-game.TitleScreen = me.ScreenObject.extend({
+game.StartScreen = me.ScreenObject.extend({
     /**
      *  action to perform on state change
      */
     onResetEvent: function() {
-        ; // TODO
+        
         me.levelDirector.loadLevel("");
 
         // Add our HUD to the game world, add it last so that this is on top of the rest.
@@ -16,7 +16,7 @@ game.TitleScreen = me.ScreenObject.extend({
      *  action to perform when leaving this screen (state change)
      */
     onDestroyEvent: function() {
-        ; // TODO
+        // remove the HUD from the game world
         me.game.world.removeChild(this.HUD);
     }
 });
