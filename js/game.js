@@ -27,12 +27,15 @@ var game = {
 
     // Run on game resources loaded.
     "loaded" : function () {
-        me.state.set(me.state.WorldSelect, new game.WorldMap());
+        //me.state.set(me.state.WorldSelect, new game.WorldMap());
         me.state.set(me.state.PLAY, new game.PlayScreen());
         //me.state.set(me.state.Start, new game.StartScreen());
 
         // add our player entity in the entity pool
-        me.pool.register("mainPlayer", game.PlayerEntity);
+        me.pool.register("Mario", game.PlayerEntity);       
+        me.pool.register("Goomba", game.PlayerEntity);
+        me.pool.register("Koopa", game.PlayerEntity);
+
         
         //enable the keyboard
         me.input.bindKey(me.input.KEY.LEFT, "left");
@@ -46,7 +49,10 @@ var game = {
         
         
 
+
+
+
         // Start the game.
-        me.state.change(me.state.Play);
+        me.state.change(me.state.PLAY);
     }
 };
