@@ -1,6 +1,11 @@
 game.resources = [
     {
-        "name": "dst-inertexponent",
+        "name": "Level1Theme",
+        "type": "audio",
+        "src": "data/bgm/"
+    },
+    {
+        "name": "World1BGM",
         "type": "audio",
         "src": "data/bgm/"
     },
@@ -20,63 +25,93 @@ game.resources = [
         "src": "data/sfx/"
     },
     {
-        "name": "area01_bkg0",
+        "name": "mario3Tiles",
         "type": "image",
-        "src": "data/img/area01_bkg0.png"
+        "src": "data/img/map/mario3Tiles.png"
     },
     {
-        "name": "area01_bkg1",
+        "name": "sma4_tiles",
         "type": "image",
-        "src": "data/img/area01_bkg1.png"
+        "src": "data/img/map/sma4_tiles.png"
     },
     {
-        "name": "32x32_font",
+        "name": "SMBWorld1Map",
         "type": "image",
-        "src": "data/img/font/32x32_font.png"
+        "src": "data/img/map/SMBWorld1Map.png"
     },
     {
-        "name": "title_screen",
+        "name": "SMBWorld1MapLevels",
         "type": "image",
-        "src": "data/img/gui/title_screen.png"
+        "src": "data/img/map/SMBWorld1MapLevels.png"
     },
     {
-        "name": "area01_level_tiles",
+        "name": "Super_Mario_3_Mario_World1_Map1",
         "type": "image",
-        "src": "data/img/map/area01_level_tiles.png"
+        "src": "data/img/map/Super_Mario_3_Mario_World1_Map1.png"
     },
     {
-        "name": "metatiles32x32",
+        "name": "World Map1",
         "type": "image",
-        "src": "data/img/map/metatiles32x32.png"
+        "src": "data/img/map/World Map1.png"
     },
     {
-        "name": "gripe_run_right",
+        "name": "mario_walk_right",
         "type": "image",
-        "src": "data/img/sprite/gripe_run_right.png"
+        "src": "data/img/sprite/mario_walk_right.png"
     },
     {
-        "name": "spinning_coin_gold",
-        "type": "image",
-        "src": "data/img/sprite/spinning_coin_gold.png"
-    },
-    {
-        "name": "wheelie_right",
-        "type": "image",
-        "src": "data/img/sprite/wheelie_right.png"
-    },
-    {
-        "name": "area01_level_tiles",
+        "name": "Mario-Prototype",
         "type": "tmx",
-        "src": "data/map/area01_level_tiles.tmx"
+        "src": "data/map/Mario-Prototype.tmx"
     },
     {
-        "name": "level2",
+        "name": "World Select",
         "type": "tmx",
-        "src": "data/map/level2.tmx"
+        "src": "data/map/World Select.tmx"
     },
     {
-        "name": "area01_level_tiles",
+        "name": "World Select(level1Done)",
+        "type": "tmx",
+        "src": "data/map/World Select(level1Done).tmx"
+    },
+    {
+        "name": "Mario-Prototype",
         "type": "tsx",
-        "src": "data/map/area01_level_tiles.tsx"
+        "src": "data/map/Mario-Prototype.tsx"
+    },
+    {
+        "name": "mario3Tiles",
+        "type": "tsx",
+        "src": "data/map/mario3Tiles.tsx"
+    },
+    {
+        "name": "sma4_tiles",
+        "type": "tsx",
+        "src": "data/map/sma4_tiles.tsx"
+    },
+    {
+        "name": "SMBWorld1Map",
+        "type": "tsx",
+        "src": "data/map/SMBWorld1Map.tsx"
+    },
+    {
+        "name": "SMBWorld1Maplevels",
+        "type": "tsx",
+        "src": "data/map/SMBWorld1Maplevels.tsx"
+    },
+    {
+        "name": "Super_Mario_3_Mario_World1_Map1",
+        "type": "tsx",
+        "src": "data/map/Super_Mario_3_Mario_World1_Map1.tsx"
+    },
+    {
+        "name": "Super_Mario_3_Mario_World1_Map1(2)",
+        "type": "tsx",
+        "src": "data/map/Super_Mario_3_Mario_World1_Map1(2).tsx"
+    },
+    {
+        "name": "World Map1",
+        "type": "tsx",
+        "src": "data/map/World Map1.tsx"
     }
 ];
