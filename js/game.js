@@ -27,14 +27,16 @@ var game = {
 
     // Run on game resources loaded.
     "loaded" : function () {
-        me.state.set(me.state.WorldSelect, new game.WorldMap());
+        //me.state.set(me.state.WorldSelect, new game.WorldMap());
         me.state.set(me.state.PLAY, new game.PlayScreen());
-        me.state.set(me.state.Start, new game.StartScreen());
+        //me.state.set(me.state.Start, new game.StartScreen());
 
         // add our player entity in the entity pool
-        me.pool.register("mainPlayer", game.PlayerEntity);
+        me.pool.register("Mario", game.PlayerEntity);        me.pool.register("Goomba", game.PlayerEntity);
+        me.pool.register("Turtle", game.PlayerEntity);
+
 
         // Start the game.
-        me.state.change(me.state.Start);
+        me.state.change(me.state.PLAY);
     }
 };
