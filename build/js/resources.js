@@ -55,9 +55,24 @@ game.resources = [
         "src": "data/img/map/World Map1.png"
     },
     {
+        "name": "Goomba",
+        "type": "image",
+        "src": "data/img/sprite/Goomba.png"
+    },
+    {
+        "name": "Mario_01",
+        "type": "image",
+        "src": "data/img/sprite/Mario_01.png"
+    },
+    {
         "name": "mario_walk_right",
         "type": "image",
         "src": "data/img/sprite/mario_walk_right.png"
+    },
+    {
+        "name": "Turtle",
+        "type": "image",
+        "src": "data/img/sprite/Turtle.png"
     },
     {
         "name": "Mario-Prototype",
@@ -73,6 +88,11 @@ game.resources = [
         "name": "World Select(level1Done)",
         "type": "tmx",
         "src": "data/map/World Select(level1Done).tmx"
+    },
+    {
+        "name": "mario_walk_right",
+        "type": "tsx",
+        "src": "data/map/mario_walk_right.tsx"
     },
     {
         "name": "Mario-Prototype",
