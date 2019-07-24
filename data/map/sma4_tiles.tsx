@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tileset version="1.2" tiledversion="1.2.4" name="sma4_tiles" tilewidth="18" tileheight="18" tilecount="1350" columns="54">
- <image source="sma4_tiles.png" trans="757575" width="982" height="452"/>
+ <image source="../img/map/sma4_tiles.png" trans="757575" width="982" height="452"/>
  <tile id="277">
   <animation>
    <frame tileid="277" duration="150"/>
@@ -73,6 +73,13 @@
    <frame tileid="709" duration="150"/>
    <frame tileid="710" duration="150"/>
    <frame tileid="711" duration="150"/>
+  </animation>
+ </tile>
+ <tile id="770">
+  <animation>
+   <frame tileid="770" duration="100"/>
+   <frame tileid="824" duration="100"/>
+   <frame tileid="878" duration="100"/>
   </animation>
  </tile>
 </tileset>
