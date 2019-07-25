@@ -100,7 +100,7 @@ game.PlayerEntity = me.Entity.extend({
     }
 });
 
-game.Coins_17x16Entity = me.CollectableEntity.extend({
+game.CoinEntity = me.CollectableEntity.extend({
 
      // extending the init function is not mandatory
     //unles you need to add some extra initialization

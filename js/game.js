@@ -32,7 +32,7 @@ var game = {
         // add our player entity in the entity pool
         me.pool.register("Mario", game.PlayerEntity);       
         me.pool.register("Goomba", game.KoopaEntity);
-        me.pool.register("Coin", game.CoinEntity);
+        me.pool.register("Coins", game.CoinEntity);
         me.pool.register("Turtle", game.KoopaEntity);
         
         //enable the keyboard

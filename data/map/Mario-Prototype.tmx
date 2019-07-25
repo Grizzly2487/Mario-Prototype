@@ -264,211 +264,211 @@
   <object id="156" name="Coins" type="Collectable" x="2339" y="592" width="16" height="16">
    <properties>
     <property name="framewidth" value="16"/>
-    <property name="image" value=""/>
+    <property name="image" value="Coins_17x16"/>
    </properties>
   </object>
   <object id="157" name="Coins" type="Collectable" x="2355" y="576" width="16" height="16">
    <properties>
     <property name="framewidth" value="16"/>
-    <property name="image" value=""/>
+    <property name="image" value="Coins_17x16"/>
    </properties>
   </object>
   <object id="158" name="Coins" type="Collectable" x="2371" y="576" width="16" height="16">
    <properties>
     <property name="framewidth" value="16"/>
-    <property name="image" value=""/>
+    <property name="image" value="Coins_17x16"/>
    </properties>
   </object>
   <object id="159" name="Coins" type="Collectable" x="2386" y="592" width="16" height="16">
    <properties>
     <property name="framewidth" value="16"/>
-    <property name="image" value=""/>
+    <property name="image" value="Coins_17x16"/>
    </properties>
   </object>
   <object id="160" name="Coins" type="Collectable" x="2387" y="609" width="16" height="16">
    <properties>
     <property name="framewidth" value="16"/>
-    <property name="image" value=""/>
+    <property name="image" value="Coins_17x16"/>
    </properties>
   </object>
   <object id="161" name="Coins" type="Collectable" x="2371" y="625" width="16" height="16">
    <properties>
     <property name="framewidth" value="16"/>
-    <property name="image" value=""/>
+    <property name="image" value="Coins_17x16"/>
    </properties>
   </object>
   <object id="162" name="Coins" type="Collectable" x="2353" y="625" width="16" height="16">
    <properties>
     <property name="framewidth" value="16"/>
-    <property name="image" value=""/>
+    <property name="image" value="Coins_17x16"/>
    </properties>
   </object>
   <object id="163" name="Coins" type="Collectable" x="2387" y="640" width="16" height="16">
    <properties>
     <property name="framewidth" value="16"/>
-    <property name="image" value=""/>
+    <property name="image" value="Coins_17x16"/>
    </properties>
   </object>
   <object id="164" name="Coins" type="Collectable" x="2387" y="656" width="16" height="16">
    <properties>
     <property name="framewidth" value="16"/>
-    <property name="image" value=""/>
+    <property name="image" value="Coins_17x16"/>
    </properties>
   </object>
   <object id="165" name="Coins" type="Collectable" x="2370" y="671" width="16" height="16">
    <properties>
     <property name="framewidth" value="16"/>
-    <property name="image" value=""/>
+    <property name="image" value="Coins_17x16"/>
    </properties>
   </object>
   <object id="166" name="Coins" type="Collectable" x="2353" y="671" width="16" height="16">
    <properties>
     <property name="framewidth" value="16"/>
-    <property name="image" value=""/>
+    <property name="image" value="Coins_17x16"/>
    </properties>
   </object>
   <object id="167" name="Coins" type="Collectable" x="2338" y="656" width="16" height="16">
    <properties>
     <property name="framewidth" value="16"/>
-    <property name="image" value=""/>
+    <property name="image" value="Coins_17x16"/>
    </properties>
   </object>
   <object id="168" name="Coins" type="Collectable" x="1840" y="176" width="16" height="16">
    <properties>
     <property name="framewidth" value="16"/>
-    <property name="image" value=""/>
+    <property name="image" value="Coins_17x16"/>
    </properties>
   </object>
   <object id="169" name="Coins" type="Collectable" x="1809" y="143" width="16" height="16">
    <properties>
     <property name="framewidth" value="16"/>
-    <property name="image" value=""/>
+    <property name="image" value="Coins_17x16"/>
    </properties>
   </object>
   <object id="170" name="Coins" type="Collectable" x="1761" y="177" width="16" height="16">
    <properties>
     <property name="framewidth" value="16"/>
-    <property name="image" value=""/>
+    <property name="image" value="Coins_17x16"/>
    </properties>
   </object>
   <object id="171" name="Coins" type="Collectable" x="1728" y="159" width="16" height="16">
    <properties>
     <property name="framewidth" value="16"/>
-    <property name="image" value=""/>
+    <property name="image" value="Coins_17x16"/>
    </properties>
   </object>
   <object id="172" name="Coins" type="Collectable" x="1697" y="191" width="16" height="16">
    <properties>
     <property name="framewidth" value="16"/>
-    <property name="image" value=""/>
+    <property name="image" value="Coins_17x16"/>
    </properties>
   </object>
   <object id="173" name="Coins" type="Collectable" x="1665" y="159" width="16" height="16">
    <properties>
     <property name="framewidth" value="16"/>
-    <property name="image" value=""/>
+    <property name="image" value="Coins_17x16"/>
    </properties>
   </object>
   <object id="174" name="Coins" type="Collectable" x="1649" y="159" width="16" height="16">
    <properties>
     <property name="framewidth" value="16"/>
-    <property name="image" value=""/>
+    <property name="image" value="Coins_17x16"/>
    </properties>
   </object>
   <object id="175" name="Coins" type="Collectable" x="1633" y="160" width="16" height="16">
    <properties>
     <property name="framewidth" value="16"/>
-    <property name="image" value=""/>
+    <property name="image" value="Coins_17x16"/>
    </properties>
   </object>
   <object id="176" name="Coins" type="Collectable" x="1619" y="160" width="16" height="16">
    <properties>
     <property name="framewidth" value="16"/>
-    <property name="image" value=""/>
+    <property name="image" value="Coins_17x16"/>
    </properties>
   </object>
   <object id="177" name="Coins" type="Collectable" x="1585" y="175" width="16" height="16">
    <properties>
     <property name="framewidth" value="16"/>
-    <property name="image" value=""/>
+    <property name="image" value="Coins_17x16"/>
    </properties>
   </object>
   <object id="178" name="Coins" type="Collectable" x="1570" y="175" width="16" height="16">
    <properties>
     <property name="framewidth" value="16"/>
-    <property name="image" value=""/>
+    <property name="image" value="Coins_17x16"/>
    </properties>
   </object>
   <object id="179" name="Coins" type="Collectable" x="1552" y="175" width="16" height="16">
    <properties>
     <property name="framewidth" value="16"/>
-    <property name="image" value=""/>
+    <property name="image" value="Coins_17x16"/>
    </properties>
   </object>
   <object id="180" name="Coins" type="Collectable" x="1535" y="175" width="16" height="16">
    <properties>
     <property name="framewidth" value="16"/>
-    <property name="image" value=""/>
+    <property name="image" value="Coins_17x16"/>
    </properties>
   </object>
   <object id="181" name="Coins" type="Collectable" x="1489" y="159" width="16" height="16">
    <properties>
     <property name="framewidth" value="16"/>
-    <property name="image" value=""/>
+    <property name="image" value="Coins_17x16"/>
    </properties>
   </object>
   <object id="182" name="Coins" type="Collectable" x="1471" y="159" width="16" height="16">
    <properties>
     <property name="framewidth" value="16"/>
-    <property name="image" value=""/>
+    <property name="image" value="Coins_17x16"/>
    </properties>
   </object>
   <object id="183" name="Coins" type="Collectable" x="1440" y="176" width="16" height="16">
    <properties>
     <property name="framewidth" value="16"/>
-    <property name="image" value=""/>
+    <property name="image" value="Coins_17x16"/>
    </properties>
   </object>
   <object id="184" name="Coins" type="Collectable" x="1360" y="128" width="16" height="16">
    <properties>
     <property name="framewidth" value="16"/>
-    <property name="image" value=""/>
+    <property name="image" value="Coins_17x16"/>
    </properties>
   </object>
   <object id="185" name="Coins" type="Collectable" x="1344" y="128" width="16" height="16">
    <properties>
     <property name="framewidth" value="16"/>
-    <property name="image" value=""/>
+    <property name="image" value="Coins_17x16"/>
    </properties>
   </object>
   <object id="186" name="Coins" type="Collectable" x="1328" y="128" width="16" height="16">
    <properties>
     <property name="framewidth" value="16"/>
-    <property name="image" value=""/>
+    <property name="image" value="Coins_17x16"/>
    </properties>
   </object>
   <object id="187" name="Coins" type="Collectable" x="1200" y="240" width="16" height="16">
    <properties>
     <property name="framewidth" value="16"/>
-    <property name="image" value=""/>
+    <property name="image" value="Coins_17x16"/>
    </properties>
   </object>
   <object id="188" name="Coins" type="Collectable" x="1168" y="272" width="16" height="16">
    <properties>
     <property name="framewidth" value="16"/>
-    <property name="image" value=""/>
+    <property name="image" value="Coins_17x16"/>
    </properties>
   </object>
   <object id="189" name="Coins" type="Collectable" x="1137" y="304" width="16" height="16">
    <properties>
     <property name="framewidth" value="16"/>
-    <property name="image" value=""/>
+    <property name="image" value="Coins_17x16"/>
    </properties>
   </object>
   <object id="190" name="Coins" type="Collectable" x="1104" y="336" width="16" height="16">
    <properties>
     <property name="framewidth" value="16"/>
-    <property name="image" value=""/>
+    <property name="image" value="Coins_17x16"/>
    </properties>
   </object>
  </objectgroup>
