@@ -8,12 +8,12 @@
   </data>
  </layer>
  <objectgroup id="3" name="Entity">
-  <object id="1" name="Mario" type="Player" x="15.6667" y="31.6667">
+  <object id="1" name="Mario" type="Player" x="15.6667" y="32.3334">
    <properties>
     <property name="image" value="Mario_01.png"/>
     <property name="width" value="16"/>
    </properties>
-   <polygon points="0,0 17,1 18,17 0,17"/>
+   <polygon points="0,0 17,0.882353 18,15 0,15"/>
   </object>
  </objectgroup>
  <objectgroup id="4" name="Collisions">
