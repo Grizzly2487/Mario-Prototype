@@ -23,12 +23,12 @@ game.PlayerEntity = me.Entity.extend({
         //TODO: Add Animation to player
         
         //define a basic animation (using all frames)
-        //this.renderable.addAnimation("walk", [0,1,2,3,4,5,6,7])
+        this.renderable.addAnimation("walk", [0,1,2])
         
-        //this.renderable.addAnimation("stand", [0])
+        this.renderable.addAnimation("stand", [0])
         
         //set standing animation as default  
-        //this.renderable.setCurrentAnimation("stand")
+        this.renderable.setCurrentAnimation("stand")
     },
     
     /**
@@ -42,28 +42,28 @@ game.PlayerEntity = me.Entity.extend({
                 this.renderable.flipX(true);
                 this.body.force.x = -this.body.maxVel.x;
                 //change to walking animation
-                //if(!this.renderable.isCurrentAnimation("walk"))
-                //{
-                //this.renderable.setCurrentAnimation("walk");
-                //}
+                if(!this.renderable.isCurrentAnimation("walk"))
+                {
+                this.renderable.setCurrentAnimation("walk");
+                }
             }
             else if(me.input.isKeyPressed('right'))
             {
                 this.renderable.flipX(false);
                 this.body.force.x = this.body.maxVel.x;
-                //if(!this.renderable.isCurrentAnimation("walk"))
-                //{
-                //this.renderable.setCurrentAnimation("walk");
-                //}
+                if(!this.renderable.isCurrentAnimation("walk"))
+                {
+                this.renderable.setCurrentAnimation("walk");
+                }
                 
             }
             else
             {
                 this.body.force.x = 0;
-                //if(!this.renderable.isCurrentAnimation("stand"))
-                //{
-                //this.renderable.setCurrentAnimation("stand");
-                //}
+                if(!this.renderable.isCurrentAnimation("stand"))
+                {
+                this.renderable.setCurrentAnimation("stand");
+                }
             }
        if(me.input.isKeyPressed('jump'))
         {
@@ -95,8 +95,52 @@ game.PlayerEntity = me.Entity.extend({
      * (called when colliding with other objects)
      */
     onCollision : function (response, other) {
+        
+         switch(response.b.body.collisionType)
+        {
+                
+            case me.collision.types.WORLD_SHAPE:
+                
+                //simulate platform object
+                if(other.type === "platform")
+                 {
+                     if(this.body.falling && !me.input.isKeyPressed('down') && response.overlapV.y > 0 && ~~this.body.vel.y >= ~~response.overlapV.y)
+                     {
+                         response.overlapV.x = 0;
+                         //respond to the platform it is solid
+                    // Make all other objects solid
+                    return true;
+                    }
+                     //Do not repond to the platform pass through
+                     return false;
+                 }
+                break;
+            case me. collision.types.ENEMY_OBJECT:
+                    if( (response.overlapV.y > 0) && !this.body.jumping)
+                        {
+                            // make sure were on top of the other object
+                            this.pos.y = other.pos.y - this.height - 2;
+                            
+                            //bounce (force jump)
+                            this.body.falling = false
+                            this.body.vel.y = -this.body.maxVel.y * me.timer.tick;
+                            
+                            //set the jumping flag
+                            this.body.jumping = true;                           
+                        }
+                        else
+                        {
+                            this.renderable.flicker(750);
+                        }
+                    
+            default:
+                    //Do not respond to other objects (e.g.Coins)
+                    return false;
+        }
+        
         // Make all other objects solid
         return true;
+    
     }
 });
 
