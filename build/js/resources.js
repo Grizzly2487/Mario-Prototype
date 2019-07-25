@@ -25,11 +25,6 @@ game.resources = [
         "src": "data/sfx/"
     },
     {
-        "name": "Coins_17x16",
-        "type": "image",
-        "src": "data/img/map/Coins_17x16.png"
-    },
-    {
         "name": "mario3Tiles",
         "type": "image",
         "src": "data/img/map/mario3Tiles.png"
@@ -58,6 +53,11 @@ game.resources = [
         "name": "World Map1",
         "type": "image",
         "src": "data/img/map/World Map1.png"
+    },
+    {
+        "name": "Coins_17x16",
+        "type": "image",
+        "src": "data/img/sprite/Coins_17x16.png"
     },
     {
         "name": "Goomba",

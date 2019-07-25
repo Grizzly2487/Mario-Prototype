@@ -136,9 +136,6 @@ game.KoopaEntity = me.Entity.extend({
         this.body.setMaxVelocity(3,15);
         this.body.setFriction(0.4, 0);
         
-        //set display to follow our postion on both axis
-        me.game.viewport.follow(this.pos, me.game.viewport.AXIS.BOTH, 0.4);
-        
         //ensure the player is updated even when outside of the viewport
         this.alwaysUpdate = true;
         
@@ -187,11 +184,7 @@ game.GoombaEntity = me.Entity.extend({
         this._super(me.Entity, 'init', [x, y , settings]);
         
         this.body.setMaxVelocity(3,15);
-        this.body.setFriction(0.4, 0);
-        
-        //set display to follow our postion on both axis
-        me.game.viewport.follow(this.pos, me.game.viewport.AXIS.BOTH, 0.4);
-        
+        this.body.setFriction(0.4, 0); 
         //ensure the player is updated even when outside of the viewport
         this.alwaysUpdate = true;
         
