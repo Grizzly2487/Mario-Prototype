@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.2" tiledversion="1.2.4" orientation="orthogonal" renderorder="right-down" width="178" height="46" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#ffffff" nextlayerid="13" nextobjectid="236">
+<map version="1.2" tiledversion="1.2.4" orientation="orthogonal" renderorder="right-down" width="178" height="46" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#ffffff" nextlayerid="13" nextobjectid="239">
  <tileset firstgid="1" source="Super_Mario_3_Mario_World1_Map1.tsx"/>
  <tileset firstgid="8011" source="sma4_tiles.tsx"/>
  <layer id="1" name="Background" width="178" height="46">
@@ -168,17 +168,17 @@
   </object>
   <object id="203" type="platform" x="1488" y="225" width="207" height="14"/>
   <object id="204" type="platform" x="1408" y="240" width="63" height="14"/>
-  <object id="205" type="platform" x="1312" y="192" width="63" height="14"/>
-  <object id="206" type="platform" x="1328" y="369" width="110" height="14"/>
-  <object id="207" type="platform" x="1297" y="400" width="110" height="14"/>
-  <object id="208" type="platform" x="1264" y="433" width="110" height="14"/>
-  <object id="209" type="platform" x="511" y="433" width="95" height="14"/>
-  <object id="210" type="platform" x="512" y="353" width="62" height="14"/>
-  <object id="211" type="platform" x="464" y="384" width="62" height="14"/>
-  <object id="212" type="platform" x="400" y="417" width="76" height="14"/>
-  <object id="214" type="platform" x="240" y="416" width="47" height="14"/>
-  <object id="215" type="platform" x="2144" y="415" width="47" height="14"/>
-  <object id="216" type="platform" x="2176" y="321" width="47" height="14"/>
+  <object id="205" type="platform" x="1312" y="192" width="63" height="8"/>
+  <object id="206" type="platform" x="1328" y="369" width="110" height="8"/>
+  <object id="207" type="platform" x="1297" y="400" width="110" height="8"/>
+  <object id="208" type="platform" x="1264" y="433" width="110" height="7"/>
+  <object id="209" type="platform" x="511" y="433" width="95" height="9"/>
+  <object id="210" type="platform" x="512" y="353" width="62" height="8"/>
+  <object id="211" type="platform" x="464" y="384" width="62" height="8"/>
+  <object id="212" type="platform" x="400" y="417" width="76" height="8"/>
+  <object id="214" type="platform" x="240" y="416" width="47" height="7"/>
+  <object id="215" type="platform" x="2144" y="415" width="47" height="8"/>
+  <object id="216" type="platform" x="2176" y="321" width="47" height="7"/>
   <object id="223" x="1792" y="431" width="32" height="47"/>
   <object id="224" x="1856" y="416" width="31" height="63"/>
   <object id="225" x="1473" y="416" width="14" height="15"/>
@@ -187,6 +187,9 @@
   <object id="228" x="226" y="352" width="16" height="16"/>
   <object id="229" x="242" y="352" width="15" height="16"/>
   <object id="230" x="418" y="369" width="14" height="14"/>
+  <object id="236" x="273" y="384" width="46" height="8"/>
+  <object id="237" x="177" y="400" width="16" height="16"/>
+  <object id="238" x="194" y="400" width="15" height="16"/>
  </objectgroup>
  <objectgroup id="8" name="WinCondition">
   <object id="91" x="2683" y="378">
@@ -420,58 +423,58 @@
    </properties>
    <polygon points="0,0 17,0 17,17 1,17"/>
   </object>
-  <object id="139" name="Turtle" type="Turtle" x="2014" y="367">
+  <object id="139" name="Turtle" type="Turtle" x="1983" y="367">
    <properties>
     <property name="frameheight" value="27"/>
     <property name="framewidth" value="17"/>
     <property name="image" value="Turtle"/>
    </properties>
-   <polygon points="0,0 18,1.94118 18,33 1,33"/>
+   <polygon points="0,0 64,1.94118 64,33 3.55556,33"/>
   </object>
-  <object id="141" name="Goomba" type="Goomba" x="2537" y="415">
+  <object id="141" name="Goomba" type="Goomba" x="2342" y="415">
    <properties>
     <property name="framewidth" value="16"/>
     <property name="image" value="Goomba"/>
    </properties>
-   <polygon points="0,0 17,1 17,17 1,18"/>
+   <polygon points="0,0 337,1 337,17 19.8235,18"/>
   </object>
-  <object id="150" name="Goomba" type="Goomba" x="848" y="416">
+  <object id="150" name="Goomba" type="Goomba" x="665" y="416">
    <properties>
     <property name="framewidth" value="16"/>
     <property name="image" value="Goomba"/>
    </properties>
-   <polygon points="0,0 17,1 17,17 1,18"/>
+   <polygon points="24,0 422,1 422,17 24.8235,18"/>
   </object>
-  <object id="151" name="Goomba" type="Goomba" x="119" y="446">
+  <object id="151" name="Goomba" type="Goomba" x="369" y="398">
    <properties>
     <property name="framewidth" value="16"/>
     <property name="image" value="Goomba"/>
    </properties>
-   <polygon points="0,0 20,1.05556 20,17.9444 1.17647,19"/>
+   <polygon points="14,0 240,1.05556 240,17.9444 14.1176,19"/>
   </object>
-  <object id="152" name="Turtle" type="Turtle" x="1343" y="319">
+  <object id="152" name="Turtle" type="Turtle" x="1337" y="319">
    <properties>
     <property name="frameheight" value="27"/>
     <property name="framewidth" value="17"/>
     <property name="image" value="Turtle"/>
    </properties>
-   <polygon points="0,0 18,1.94118 18,33 1,33"/>
+   <polygon points="0,0 103,1.94118 103,33 5.72222,33"/>
   </object>
-  <object id="153" name="Turtle" type="Turtle" x="546" y="316">
+  <object id="153" name="Turtle" type="Turtle" x="508" y="316">
    <properties>
     <property name="frameheight" value="27"/>
     <property name="framewidth" value="17"/>
     <property name="image" value="Turtle"/>
    </properties>
-   <polygon points="0,0 18,1.94118 18,33 1,33"/>
+   <polygon points="4,1 69,1.94118 69,33 3.83333,33"/>
   </object>
-  <object id="154" name="Turtle" type="Turtle" x="330" y="426">
+  <object id="154" name="Turtle" type="Turtle" x="181.765" y="426">
    <properties>
     <property name="frameheight" value="27"/>
     <property name="framewidth" value="17"/>
     <property name="image" value="Turtle"/>
    </properties>
-   <polygon points="0,0 18,1.94118 18,33 1,33"/>
+   <polygon points="9.47059,2 166.235,1.94118 166.235,33 9.23529,33"/>
   </object>
  </objectgroup>
  <layer id="6" name="Foreground2" width="178" height="46">
