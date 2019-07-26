@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.2" tiledversion="1.2.4" orientation="orthogonal" renderorder="right-down" width="178" height="46" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#ffffff" nextlayerid="13" nextobjectid="218">
+<map version="1.2" tiledversion="1.2.4" orientation="orthogonal" renderorder="right-down" width="178" height="46" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#ffffff" nextlayerid="13" nextobjectid="221">
  <tileset firstgid="1" source="Super_Mario_3_Mario_World1_Map1.tsx"/>
  <tileset firstgid="8011" source="sma4_tiles.tsx"/>
  <layer id="1" name="Background" width="178" height="46">
@@ -14,7 +14,7 @@
  </layer>
  <objectgroup id="4" name="Collisions1">
   <object id="1" x="-30" y="465">
-   <polygon points="0,0 671,0 671,15 2.15409,13"/>
+   <polygon points="0,0 653,0 653,15 2.09631,13"/>
   </object>
   <object id="3" x="625" y="449">
    <polygon points="0,0 -1,32 462,31 463,0"/>
@@ -206,10 +206,10 @@
   <object id="210" type="platform" x="512" y="353" width="62" height="14"/>
   <object id="211" type="platform" x="464" y="384" width="62" height="14"/>
   <object id="212" type="platform" x="400" y="417" width="76" height="14"/>
-  <object id="213" type="platform" x="271" y="384" width="47" height="14"/>
   <object id="214" type="platform" x="240" y="416" width="47" height="14"/>
   <object id="215" type="platform" x="2144" y="415" width="47" height="14"/>
   <object id="216" type="platform" x="2176" y="321" width="47" height="14"/>
+  <object id="220" x="720" y="313"/>
  </objectgroup>
  <objectgroup id="8" name="WinCondition">
   <object id="91" x="2683" y="378">
@@ -474,12 +474,12 @@
    </properties>
    <polygon points="0,0 17,1 17,17 1,18"/>
   </object>
-  <object id="151" name="Goomba" type="Goomba" x="208" y="430">
+  <object id="151" name="Goomba" type="Goomba" x="119" y="446">
    <properties>
     <property name="framewidth" value="16"/>
     <property name="image" value="Goomba"/>
    </properties>
-   <polygon points="0,0 17,1 17,17 1,18"/>
+   <polygon points="0,0 20,1.05556 20,17.9444 1.17647,19"/>
   </object>
   <object id="152" name="Turtle" type="Turtle" x="1343" y="319">
    <properties>
@@ -489,7 +489,7 @@
    </properties>
    <polygon points="0,0 18,1.94118 18,33 1,33"/>
   </object>
-  <object id="153" name="Turtle" type="Turtle" x="543" y="301">
+  <object id="153" name="Turtle" type="Turtle" x="546" y="316">
    <properties>
     <property name="frameheight" value="27"/>
     <property name="framewidth" value="17"/>
@@ -497,7 +497,7 @@
    </properties>
    <polygon points="0,0 18,1.94118 18,33 1,33"/>
   </object>
-  <object id="154" name="Turtle" type="Turtle" x="287" y="319">
+  <object id="154" name="Turtle" type="Turtle" x="330" y="426">
    <properties>
     <property name="frameheight" value="27"/>
     <property name="framewidth" value="17"/>
