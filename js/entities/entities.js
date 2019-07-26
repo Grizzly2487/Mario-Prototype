@@ -65,21 +65,23 @@ game.PlayerEntity = me.Entity.extend({
                 //this.renderable.setCurrentAnimation("stand");
                 //}
             }
-       if(me.input.isKeyPressed('jump'))
-        {
-                
-            if(!this.body.jumping && !this.body.falling)
-            {
-                //set current vel to the max defined value
-                //gravity will then do the rest
-                this.body.force.y = -this.body.maxVel.y;
-            }   
-            
-        }
-        else
-        {
-            this.body.force.y = 0;   
-        }
+       if (me.input.isKeyPressed('jump')) 
+      {
+          if (!this.body.jumping && !this.body.falling && !this.body.jumping == 1)
+          {
+              // --- Sets Jumping to 0, so mario can jump
+              this.body.jumping = 0;
+              // set current vel to the maximum defined value
+              // gravity will then do the rest
+              this.body.force.y = -this.body.maxVel.y
+          }
+      } 
+        else 
+      {
+          this.body.force.y = 0;
+          // --- Sets Jumping to 1, so Mario cant jump mid air
+          this.body.jumping = 1;
+      }
         // apply physics to the body (this moves the entity)
         this.body.update(dt);
 
