@@ -274,7 +274,7 @@ game.GoombaEntity = me.Entity.extend({
             if(this.alive && (response.overlapV.y > 0)&& 
                 response.a.body.falling)
             {
-                // this.renderable.flicker(750)
+                this.renderable.flicker(750)
             }
                 return false;
         }

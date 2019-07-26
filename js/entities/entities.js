@@ -10,7 +10,7 @@ game.PlayerEntity = me.Entity.extend({
         // call the constructor
         this._super(me.Entity, 'init', [x, y, settings]);
         
-        this.body.setMaxVelocity(3,15);
+        this.body.setMaxVelocity(1.5,13);
         this.body.setFriction(0.4, 0);
         
         //set the display to follow our position on both axis
@@ -159,7 +159,7 @@ game.CoinEntity = me.CollectableEntity.extend({
     //an object is touched by something (here collected)
     onCollision : function (response, other){
         //do something when collected
-            
+         game.data.score +=1;      
         //make sure is not collected again
         this.body.setCollisionMask(me.collision.types.NO_OBJECT);
             

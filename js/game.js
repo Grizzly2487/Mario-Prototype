@@ -46,6 +46,6 @@ var game = {
 
 
         // Start the game.
-        me.state.change(me.state.Play);
+        me.state.change(me.state.PLAY);
     }    
 };
