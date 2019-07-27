@@ -25,6 +25,16 @@ game.resources = [
         "src": "data/sfx/"
     },
     {
+        "name": "PressStart2P",
+        "type": "image",
+        "src": "data/fnt/PressStart2P.png"
+    },
+    {
+        "name": "PressStart2P",
+        "type": "binary",
+        "src": "data/fnt/PressStart2P.fnt"
+    },
+    {
         "name": "mario3Tiles",
         "type": "image",
         "src": "data/img/map/mario3Tiles.png"
