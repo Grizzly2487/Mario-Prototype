@@ -25,16 +25,6 @@ game.resources = [
         "src": "data/sfx/"
     },
     {
-        "name": "PressStart2P",
-        "type": "image",
-        "src": "data/fnt/PressStart2p.png"
-    },
-    {
-        "name": "PressStart2P",
-        "type": "binary",
-        "src": "data/fnt/PressStart2p.fnt"
-    },
-    {
         "name": "mario3Tiles",
         "type": "image",
         "src": "data/img/map/mario3Tiles.png"
@@ -70,6 +60,16 @@ game.resources = [
         "src": "data/img/sprite/Coins_17x16.png"
     },
     {
+        "name": "Flying Goomba",
+        "type": "image",
+        "src": "data/img/sprite/Flying Goomba.png"
+    },
+    {
+        "name": "FlyingTurtle",
+        "type": "image",
+        "src": "data/img/sprite/FlyingTurtle.png"
+    },
+    {
         "name": "Goomba",
         "type": "image",
         "src": "data/img/sprite/Goomba.png"
@@ -83,6 +83,11 @@ game.resources = [
         "name": "mario_walk_right",
         "type": "image",
         "src": "data/img/sprite/mario_walk_right.png"
+    },
+    {
+        "name": "PirhanaPlant",
+        "type": "image",
+        "src": "data/img/sprite/PirhanaPlant.png"
     },
     {
         "name": "Turtle",
@@ -148,6 +153,11 @@ game.resources = [
         "name": "Super_Mario_3_Mario_World1_Map1(2)",
         "type": "tsx",
         "src": "data/map/Super_Mario_3_Mario_World1_Map1(2).tsx"
+    },
+    {
+        "name": "SuperMario3_Enemies_SpriteSheet2",
+        "type": "tsx",
+        "src": "data/map/SuperMario3_Enemies_SpriteSheet2.tsx"
     },
     {
         "name": "World Map1",

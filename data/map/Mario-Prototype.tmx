@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.2" tiledversion="1.2.4" orientation="orthogonal" renderorder="right-down" width="178" height="46" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#ffffff" nextlayerid="13" nextobjectid="239">
+<map version="1.2" tiledversion="1.2.4" orientation="orthogonal" renderorder="right-down" width="178" height="46" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#ffffff" nextlayerid="14" nextobjectid="239">
  <tileset firstgid="1" source="Super_Mario_3_Mario_World1_Map1.tsx"/>
  <tileset firstgid="8011" source="sma4_tiles.tsx"/>
  <layer id="1" name="Background" width="178" height="46">
@@ -187,7 +187,7 @@
   <object id="228" x="226" y="352" width="16" height="16"/>
   <object id="229" x="242" y="352" width="15" height="16"/>
   <object id="230" x="418" y="369" width="14" height="14"/>
-  <object id="236" x="273" y="384" width="46" height="8"/>
+  <object id="236" type="platform" x="273" y="384" width="46" height="8"/>
   <object id="237" x="177" y="400" width="16" height="16"/>
   <object id="238" x="194" y="400" width="15" height="16"/>
  </objectgroup>
