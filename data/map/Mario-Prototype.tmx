@@ -254,64 +254,7 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="14" name="Boxes">
-  <object id="252" name="Box" type="RaccoonLeaf" x="416" y="367" width="16" height="16">
-   <properties>
-    <property name="frameheight" value="16"/>
-    <property name="framewidth" value="16"/>
-    <property name="image" value="Boxes"/>
-   </properties>
-  </object>
-  <object id="253" name="Box" type="MushroomBox" x="241" y="352" width="16" height="16">
-   <properties>
-    <property name="frameheight" value="16"/>
-    <property name="framewidth" value="16"/>
-    <property name="image" value="Boxes"/>
-   </properties>
-  </object>
-  <object id="254" name="Box" type="CoinBox" x="224" y="352" width="16" height="16">
-   <properties>
-    <property name="frameheight" value="16"/>
-    <property name="framewidth" value="16"/>
-    <property name="image" value="Boxes"/>
-   </properties>
-  </object>
-  <object id="255" name="Box" type="CoinBox" x="191" y="400" width="16" height="16">
-   <properties>
-    <property name="frameheight" value="16"/>
-    <property name="framewidth" value="16"/>
-    <property name="image" value="Boxes"/>
-   </properties>
-  </object>
-  <object id="256" name="Box" type="CoinBox" x="176" y="400" width="16" height="16">
-   <properties>
-    <property name="frameheight" value="16"/>
-    <property name="framewidth" value="16"/>
-    <property name="image" value="Boxes"/>
-   </properties>
-  </object>
-  <object id="258" name="Box" type="RaccoonLeaf" x="656" y="431" width="16" height="16">
-   <properties>
-    <property name="frameheight" value="16"/>
-    <property name="framewidth" value="16"/>
-    <property name="image" value="Boxes"/>
-   </properties>
-  </object>
-  <object id="259" name="Box" type="CoinBox" x="704" y="399" width="16" height="16">
-   <properties>
-    <property name="frameheight" value="16"/>
-    <property name="framewidth" value="16"/>
-    <property name="image" value="Boxes"/>
-   </properties>
-  </object>
-  <object id="260" name="Box" type="RaccoonLeaf" x="1473" y="416" width="16" height="16">
-   <properties>
-    <property name="frameheight" value="16"/>
-    <property name="framewidth" value="16"/>
-    <property name="image" value="Boxes"/>
-   </properties>
-  </object>
- </objectgroup>
+ <objectgroup id="14" name="Boxes"/>
  <objectgroup id="8" name="WinCondition">
   <object id="91" x="2683" y="378">
    <polygon points="0,0 26,0 26,26 0,25"/>

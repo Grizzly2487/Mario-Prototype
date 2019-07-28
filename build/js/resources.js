@@ -130,6 +130,11 @@ game.resources = [
         "src": "data/map/Mario-Prototype.tmx"
     },
     {
+        "name": "title",
+        "type": "tmx",
+        "src": "data/map/title.tmx"
+    },
+    {
         "name": "World Select",
         "type": "tmx",
         "src": "data/map/World Select.tmx"
@@ -165,6 +170,11 @@ game.resources = [
         "src": "data/map/sma4_tiles.tsx"
     },
     {
+        "name": "small tiles",
+        "type": "tsx",
+        "src": "data/map/small tiles.tsx"
+    },
+    {
         "name": "SMBWorld1Map",
         "type": "tsx",
         "src": "data/map/SMBWorld1Map.tsx"
@@ -188,6 +198,26 @@ game.resources = [
         "name": "SuperMario3_Enemies_SpriteSheet2",
         "type": "tsx",
         "src": "data/map/SuperMario3_Enemies_SpriteSheet2.tsx"
+    },
+    {
+        "name": "title",
+        "type": "tsx",
+        "src": "data/map/title.tsx"
+    },
+    {
+        "name": "TitleScreen Numbers",
+        "type": "tsx",
+        "src": "data/map/TitleScreen Numbers.tsx"
+    },
+    {
+        "name": "TitleScreen Words",
+        "type": "tsx",
+        "src": "data/map/TitleScreen Words.tsx"
+    },
+    {
+        "name": "titletiles",
+        "type": "tsx",
+        "src": "data/map/titletiles.tsx"
     },
     {
         "name": "World Map1",
