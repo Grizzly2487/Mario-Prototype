@@ -60,14 +60,34 @@ game.resources = [
         "src": "data/img/map/Super_Mario_3_Mario_World1_Map1.png"
     },
     {
+        "name": "TitleScreen Numbers",
+        "type": "image",
+        "src": "data/img/map/TitleScreen Numbers.png"
+    },
+    {
+        "name": "TitleScreen Words",
+        "type": "image",
+        "src": "data/img/map/TitleScreen Words.png"
+    },
+    {
         "name": "World Map1",
         "type": "image",
         "src": "data/img/map/World Map1.png"
     },
     {
-        "name": "Coins_17x16",
+        "name": "Boxes",
         "type": "image",
-        "src": "data/img/sprite/Coins_17x16.png"
+        "src": "data/img/sprite/Boxes.png"
+    },
+    {
+        "name": "BreakableBlocks",
+        "type": "image",
+        "src": "data/img/sprite/BreakableBlocks.png"
+    },
+    {
+        "name": "Coins",
+        "type": "image",
+        "src": "data/img/sprite/Coins.png"
     },
     {
         "name": "Flying Goomba",
