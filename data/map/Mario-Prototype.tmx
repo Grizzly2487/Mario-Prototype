@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.2" tiledversion="1.2.4" orientation="orthogonal" renderorder="right-down" width="178" height="46" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#ffffff" nextlayerid="14" nextobjectid="239">
+<map version="1.2" tiledversion="1.2.4" orientation="orthogonal" renderorder="right-down" width="178" height="46" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#ffffff" nextlayerid="14" nextobjectid="241">
  <tileset firstgid="1" source="Super_Mario_3_Mario_World1_Map1.tsx"/>
  <tileset firstgid="8011" source="sma4_tiles.tsx"/>
  <layer id="1" name="Background" width="178" height="46">
@@ -431,13 +431,6 @@
    </properties>
    <polygon points="0,0 64,1.94118 64,33 3.55556,33"/>
   </object>
-  <object id="141" name="Goomba" type="Goomba" x="2342" y="415">
-   <properties>
-    <property name="framewidth" value="16"/>
-    <property name="image" value="Goomba"/>
-   </properties>
-   <polygon points="0,0 337,1 337,17 19.8235,18"/>
-  </object>
   <object id="150" name="Goomba" type="Goomba" x="665" y="416">
    <properties>
     <property name="framewidth" value="16"/>
@@ -445,20 +438,12 @@
    </properties>
    <polygon points="24,0 422,1 422,17 24.8235,18"/>
   </object>
-  <object id="151" name="Goomba" type="Goomba" x="369" y="398">
+  <object id="151" name="Goomba" type="Goomba" x="355.667" y="444">
    <properties>
     <property name="framewidth" value="16"/>
     <property name="image" value="Goomba"/>
    </properties>
    <polygon points="14,0 240,1.05556 240,17.9444 14.1176,19"/>
-  </object>
-  <object id="152" name="Turtle" type="Turtle" x="1337" y="319">
-   <properties>
-    <property name="frameheight" value="27"/>
-    <property name="framewidth" value="17"/>
-    <property name="image" value="Turtle"/>
-   </properties>
-   <polygon points="0,0 103,1.94118 103,33 5.72222,33"/>
   </object>
   <object id="153" name="Turtle" type="Turtle" x="508" y="316">
    <properties>
@@ -468,13 +453,26 @@
    </properties>
    <polygon points="4,1 69,1.94118 69,33 3.83333,33"/>
   </object>
-  <object id="154" name="Turtle" type="Turtle" x="181.765" y="426">
+  <object id="154" name="Turtle" type="Turtle" x="69.765" y="428.667">
    <properties>
     <property name="frameheight" value="27"/>
     <property name="framewidth" value="17"/>
     <property name="image" value="Turtle"/>
    </properties>
    <polygon points="9.47059,2 166.235,1.94118 166.235,33 9.23529,33"/>
+  </object>
+  <object id="239" name="Turtle" type="Turtle" x="1328.67" y="334.667" width="110.667" height="30">
+   <properties>
+    <property name="frameheight" value="27"/>
+    <property name="framewidth" value="17"/>
+    <property name="image" value="Turtle"/>
+   </properties>
+  </object>
+  <object id="240" name="Goomba" type="Goomba" x="2305.33" y="318" width="176" height="18">
+   <properties>
+    <property name="framewidth" value="16"/>
+    <property name="image" value="Goomba"/>
+   </properties>
   </object>
  </objectgroup>
  <layer id="6" name="Foreground2" width="178" height="46">
