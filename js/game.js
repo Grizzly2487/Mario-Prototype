@@ -34,7 +34,7 @@ var game = {
         me.pool.register("Goomba", game.GoombaEntity);
         me.pool.register("Coins", game.CoinEntity);
         me.pool.register("Turtle", game.KoopaEntity);
-        me.pool.register("BreakableBlocks", game.BreakableBlocksEntity);
+        me.pool.register("ItemBlocks", game.ItemBlocksEntity);
         
         //enable the keyboard
         me.input.bindKey(me.input.KEY.LEFT, "left");
