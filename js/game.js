@@ -35,7 +35,6 @@ var game = {
         me.pool.register("Coins", game.CoinEntity);
         me.pool.register("Turtle", game.KoopaEntity);
         me.pool.register("ItemBlocks", game.ItemBlocksEntity);
-        //me.pool.register("PirhanaPlant", game.PirhanaPlantEntity);
         
         //enable the keyboard
         me.input.bindKey(me.input.KEY.LEFT, "left");

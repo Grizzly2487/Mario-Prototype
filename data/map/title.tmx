@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.2" tiledversion="1.2.4" orientation="orthogonal" renderorder="right-down" width="30" height="16" tilewidth="16" tileheight="16" infinite="0" nextlayerid="7" nextobjectid="1">
  <tileset firstgid="1" source="titletiles.tsx"/>
- <tileset firstgid="1351" source="mario3Tiles.tsx"/>
+ <tileset firstgid="1351" source="TitleScreen Words.tsx"/>
  <tileset firstgid="1406" source="TitleScreen Numbers.tsx"/>
  <layer id="1" name="background" width="30" height="16">
   <data encoding="csv">
