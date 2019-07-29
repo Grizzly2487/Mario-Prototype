@@ -41,11 +41,14 @@ game.HUD.ScoreItem = me.Renderable.extend({
         
          //create the font object
         this.font= new me.BitmapFont(me.loader.getBinary('PressStart2P'),
-        me.loader.getImage('PressStart2P'));
+        //0.4 is the font size
+        me.loader.getImage('PressStart2P'),0.4);
         
         // font alignment to right bottom
         this.font.textAlign = "right";
         this.font.textBaseline = "bottom";
+        
+        ;
         // change font size
         
         
@@ -74,7 +77,10 @@ game.HUD.ScoreItem = me.Renderable.extend({
     draw : function (context) {
         // draw it baby !
          //this.pos.x, this.pos.y are the relative position from the screen right bottom
-        this.font.draw(context, game.data.score, 25, 25);
+        //placement of the text
+        this.font.draw(context, game.data.score, 350, 25);
+        this.font.draw(context, "SCORE", 330, 25);
+        
       
     }
 
