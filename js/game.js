@@ -11,7 +11,7 @@ var game = {
     // Run on page load.
     "onload" : function () {
         // Initialize the video.
-        if (!me.video.init(220, 160, {wrapper : "screen", scale : "auto"})) {
+        if (!me.video.init(360, 240, {wrapper : "screen", scale : "auto"})) {
             alert("Your browser does not support HTML5 canvas.");
             return;
         }
@@ -26,7 +26,7 @@ var game = {
 
     // Run on game resources loaded.
     "loaded" : function () {
-        //me.state.set(me.state.WorldMap, new game.WorldMap());
+        //me.state.set(me.state.MENU, new game.TitleScreen());
         me.state.set(me.state.PLAY, new game.PlayScreen());
 
         // add our player entity in the entity pool
@@ -35,14 +35,16 @@ var game = {
         me.pool.register("Coins", game.CoinEntity);
         me.pool.register("Turtle", game.KoopaEntity);
         me.pool.register("ItemBlocks", game.ItemBlocksEntity);
-        me.pool.register("Mario(LevelSelect)", game.MarioLevelSelectEntity);
-        me.pool.register("Level1", game.Level1Entity);
         
         //enable the keyboard
         me.input.bindKey(me.input.KEY.LEFT, "left");
         me.input.bindKey(me.input.KEY.RIGHT, "right");
-        me.input.bindKey(me.input.KEY.UP, "up");
-        me.input.bindKey(me.input.KEY.DOWN, "down");
+       
+        //Jump
+        me.input.bindKey(me.input.KEY.SPACE, "jump", true);
+        me.input.bindKey(me.input.KEY.X, "jump", true);
+        me.input.bindKey(me.input.KEY.UP, "jump", true);
+
 
         // Start the game.
         me.state.change(me.state.PLAY);
