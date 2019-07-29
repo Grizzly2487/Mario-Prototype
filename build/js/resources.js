@@ -145,6 +145,11 @@ game.resources = [
         "src": "data/map/World Select(level1Done).tmx"
     },
     {
+        "name": "BreakableBlocks",
+        "type": "tsx",
+        "src": "data/map/BreakableBlocks.tsx"
+    },
+    {
         "name": "Coins_17x16",
         "type": "tsx",
         "src": "data/map/Coins_17x16.tsx"

@@ -169,28 +169,6 @@ game.CoinEntity = me.CollectableEntity.extend({
         return false
     }
 });
-game.BreakableBlocksEntity = me.Entity.extend({
-
-     // extending the init function is not mandatory
-    //unles you need to add some extra initialization
-     
-     init:function (x, y, settings) {
-        // call the  parent constructor
-        this._super(me.Entity, 'init', [x, y, settings]);
-    },
-    //this function is called by the engine
-    //an object is touched by something (here collected)
-    onCollision : function (response, other)
-    {  
-        //make sure is not collected again
-        this.body.setCollisionMask(me.collision.types.NO_OBJECT);
-            
-        //remove it
-        me.game.world.removeChild(this);
-            
-        return false
-    }
-});
 
 game.KoopaEntity = me.Entity.extend({
     /**
@@ -291,7 +269,18 @@ game.GoombaEntity = me.Entity.extend({
     }
 });       
         
-        
+game.ItemBlocksEntity = me.Entity.extend({
+    /**
+     * constructor
+     */
+    
+    init:function (x, y, settings)
+    {
+        // call the constructor
+        this._super(me.Entity, 'init', [x, y , settings]);
+    }
+});
+       
         
         
         
