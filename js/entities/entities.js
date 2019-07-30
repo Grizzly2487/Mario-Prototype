@@ -170,12 +170,12 @@ game.CoinEntity = me.CollectableEntity.extend({
     }
 });
 
-game.KoopaEntity = me.Entity.extend({
+/*game.KoopaEntity = me.Entity.extend({
     /**
      * constructor
      */
     
-    init:function (x, y, settings) {
+    /*init:function (x, y, settings) {
         // call the constructor
         this._super(me.Entity, 'init', [x, y , settings]);
         
@@ -191,7 +191,7 @@ game.KoopaEntity = me.Entity.extend({
     /**
      * update the entity
      */
-    update : function (dt) {
+    /*update : function (dt) {
         //if(me.)
         //{
             //this.body.force.x = -this.body.maxVel.x;    
@@ -214,7 +214,7 @@ game.KoopaEntity = me.Entity.extend({
      * colision handler
      * (called when colliding with other objects)
      */
-    onCollision : function (response, other) {
+    /*onCollision : function (response, other) {
         // Make all other objects solid
         return true;
     }
@@ -225,7 +225,7 @@ game.GoombaEntity = me.Entity.extend({
      * constructor
      */
     
-    init:function (x, y, settings) {
+    /*init:function (x, y, settings) {
         // call the constructor
         this._super(me.Entity, 'init', [x, y , settings]);
         
@@ -240,7 +240,7 @@ game.GoombaEntity = me.Entity.extend({
     /**
      * update the entity
      */
-    update : function (dt) {
+    /*update : function (dt) {
         //if(me.)
         //{
             //this.body.force.x = -this.body.maxVel.x;    
@@ -263,11 +263,11 @@ game.GoombaEntity = me.Entity.extend({
      * colision handler
      * (called when colliding with other objects)
      */
-    onCollision : function (response, other) {
+    //onCollision : function (response, other) {
         // Make all other objects solid
-        return true;
-    }
-});       
+        //return true;
+    //}
+//});       
         
 game.ItemBlocksEntity = me.Entity.extend({
     /**
