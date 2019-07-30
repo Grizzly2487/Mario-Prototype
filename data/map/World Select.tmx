@@ -22,6 +22,7 @@
    <properties>
     <property name="duration" value="300"/>
     <property name="fade" value="#000000"/>
+    <property name="image" value="SMBWorld1Levels"/>
     <property name="to" value="Mario-Prototype"/>
    </properties>
   </object>
