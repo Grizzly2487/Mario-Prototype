@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.2" tiledversion="1.2.4" orientation="orthogonal" renderorder="right-down" width="16" height="10" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#555555" nextlayerid="7" nextobjectid="20">
+<map version="1.2" tiledversion="1.2.4" orientation="orthogonal" renderorder="right-down" width="16" height="10" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#555555" nextlayerid="7" nextobjectid="23">
  <tileset firstgid="1" source="SMBWorld1Map.tsx"/>
  <tileset firstgid="121" source="SMBWorld1Maplevels.tsx"/>
  <layer id="1" name="Background" width="16" height="10">
   <data encoding="base64">
-   AQAAAAEAAAABAAAAeQAAAAUAAAAHAAAABQAAAAcAAAAFAAAABwAAAAUAAAAHAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAYAAAABAAAAAQAAAAEAAAAGAAAAAQAAAAEAAAABAAAABgAAAAEAAAABAAAAAQAAAAEAAAAFAAAAGwAAAAUAAAAJAAAAAQAAAAEAAAABAAAACAAAAAUAAAAHAAAABQAAACAAAAABAAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAQAAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIQAAAAUAAAAVAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAB4AAAAgAAAABQAAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAeAAAAHgAAAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAA==
+   AQAAAAEAAAABAAAAHAAAAAUAAAAHAAAABQAAAAcAAAAFAAAABwAAAAUAAAAHAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAYAAAABAAAAAQAAAAEAAAAGAAAAAQAAAAEAAAABAAAABgAAAAEAAAABAAAAAQAAAAEAAAAFAAAAGwAAAAUAAAAJAAAAAQAAAAEAAAABAAAACAAAAAUAAAAHAAAABQAAACAAAAABAAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAQAAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIQAAAAUAAAAVAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAB4AAAAgAAAABQAAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAeAAAAHgAAAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAA==
   </data>
  </layer>
  <layer id="2" name="Foreground" width="16" height="10">
@@ -13,25 +13,25 @@
   </data>
  </layer>
  <objectgroup id="5" name="Collisions">
-  <object id="12" x="0.25" y="-27.5" width="46.5" height="58.25"/>
+  <object id="12" x="-0.0833333" y="-28.1667" width="46.5" height="58.25"/>
   <object id="13" x="0.25" y="48" width="96" height="30.5"/>
-  <object id="14" x="-31.5" y="25" width="46.5" height="30.5"/>
-  <object id="16" x="31.25" y="-30.25" width="96" height="30.5"/>
-  <object id="17" x="64.25" y="-26" width="96" height="104.25"/>
+  <object id="14" x="-33.5" y="25" width="46.5" height="30.5"/>
+  <object id="16" x="31.25" y="-31.25" width="96" height="30.5"/>
+  <object id="17" x="65.25" y="-25.6667" width="96" height="104.25"/>
+  <object id="22" name="me.LevelEntity" x="48.6667" y="0.333333" width="15" height="15">
+   <properties>
+    <property name="duration" value="300"/>
+    <property name="fade" value="#000000"/>
+    <property name="to" value="Mario-Prototype"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup id="6" name="Entity">
-  <object id="18" name="MarioLevelSelect" type="Player" x="16" y="32.5" width="15" height="15">
+  <object id="18" name="MarioLevelSelect" x="15.6667" y="31.8333" width="15" height="15">
    <properties>
     <property name="frameheight" value="15"/>
     <property name="framewidth" value="15"/>
     <property name="image" value="Mario_01"/>
-   </properties>
-  </object>
-  <object id="19" name="Level1" type="Level1" x="48" y="0.75" width="16" height="16">
-   <properties>
-    <property name="frameheight" value="16"/>
-    <property name="framewidth" value="16"/>
-    <property name="image" value="SMBWorld1MapLevels"/>
    </properties>
   </object>
  </objectgroup>

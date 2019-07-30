@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.2" tiledversion="1.2.4" orientation="orthogonal" renderorder="right-down" width="178" height="46" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#ffffff" nextlayerid="17" nextobjectid="327">
+<map version="1.2" tiledversion="1.2.4" orientation="orthogonal" renderorder="right-down" width="178" height="46" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#ffffff" nextlayerid="17" nextobjectid="329">
  <tileset firstgid="1" source="Super_Mario_3_Mario_World1_Map1.tsx"/>
  <tileset firstgid="8011" source="sma4_tiles.tsx"/>
  <tileset firstgid="9361" source="BreakableBlocks.tsx"/>
@@ -418,6 +418,8 @@
   <object id="288" x="2080.5" y="448" width="31" height="31"/>
   <object id="313" x="1793" y="432" width="30.3333" height="48"/>
   <object id="314" x="1856.67" y="416.333" width="30.6667" height="64.3333"/>
+  <object id="327" type="TeleporterIn" x="2256.08" y="413.583" width="31.3333" height="5"/>
+  <object id="328" type="TeleporterOut" x="2479.92" y="571.75" width="33.3333" height="5"/>
  </objectgroup>
  <objectgroup id="10" name="Entity">
   <object id="127" name="Mario" type="mainPlayer" x="15" y="431">

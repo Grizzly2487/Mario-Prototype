@@ -65,31 +65,31 @@ game.PlayerEntity = me.Entity.extend({
                 this.renderable.setCurrentAnimation("stand");
                 }
             }
-       if (me.input.isKeyPressed('jump')) 
-      {
-          if (!this.body.jumping && !this.body.falling && !this.body.jumping == 1)
-          {
-              // --- Sets Jumping to 0, so mario can jump
-              this.body.jumping = 0;
-              // set current vel to the maximum defined value
-              // gravity will then do the rest
-              this.body.force.y = -this.body.maxVel.y
-          }
-      } 
-        else 
-      {
-          this.body.force.y = 0;
-          // --- Sets Jumping to 1, so Mario cant jump mid air
-          this.body.jumping = 1;
-      }
+            if (me.input.isKeyPressed('jump')) 
+            {
+            if (!this.body.jumping && !this.body.falling && !this.body.jumping == 1)
+              {
+                  // --- Sets Jumping to 0, so mario can jump
+                  this.body.jumping = 0;
+                  // set current vel to the maximum defined value
+                  // gravity will then do the rest
+                  this.body.force.y = -this.body.maxVel.y
+              }
+            } 
+            else 
+            {
+              this.body.force.y = 0;
+              // --- Sets Jumping to 1, so Mario cant jump mid air
+              this.body.jumping = 1;
+            }
         // apply physics to the body (this moves the entity)
-        this.body.update(dt);
+            this.body.update(dt);
 
         // handle collisions against other shapes
-        me.collision.check(this);
+            me.collision.check(this);
 
         // return true if we moved or if the renderable was updated
-        return (this._super(me.Entity, 'update', [dt]) || this.body.vel.x !== 0 || this.body.vel.y !== 0);
+            return (this._super(me.Entity, 'update', [dt]) || this.body.vel.x !== 0 || this.body.vel.y !== 0);
     },
 
    /**
@@ -98,7 +98,7 @@ game.PlayerEntity = me.Entity.extend({
      */
     onCollision : function (response, other) {
         
-         switch(response.b.body.collisionType)
+        switch(response.b.body.collisionType)
         {
                 
             case me.collision.types.WORLD_SHAPE:
@@ -134,7 +134,7 @@ game.PlayerEntity = me.Entity.extend({
                         {
                             this.renderable.flicker(750);
                         }
-                    
+
             default:
                     //Do not respond to other objects (e.g.Coins)
                     return false;
@@ -280,20 +280,8 @@ game.ItemBlocksEntity = me.Entity.extend({
         this._super(me.Entity, 'init', [x, y , settings]);
     }
 });
-game.Level1 = me.Entity.extend({
-    /**
-     * constructor
-     */
-    
-    init:function (x, y, settings)
-    {
-        // call the constructor
-        this._super(me.Entity, 'init', [x, y , settings]);
-    }
-});
-
-game.MarioLevelSelectEntity = me.Entity.extend({
-
+game.MarioLevelSelectEntity = me.Entity.extend(
+{
     /**
      * constructor
      */
@@ -302,7 +290,7 @@ game.MarioLevelSelectEntity = me.Entity.extend({
         this._super(me.Entity, 'init', [x, y, settings]);
         
         this.body.setMaxVelocity(1.5,1.5);
-        this.body.setFriction(0.4, 0.4);
+        this.body.setFriction(0.4, 0);
         this.body.gravity = 0;
         
         //set the display to follow our position on both axis
@@ -331,7 +319,6 @@ game.MarioLevelSelectEntity = me.Entity.extend({
     {
         if(me.input.isKeyPressed('left'))
             {
-                this.renderable.flipX(true);
                 this.body.force.x = -this.body.maxVel.x;
                 //change to walking animation
                 if(!this.renderable.isCurrentAnimation("walk"))
@@ -341,8 +328,16 @@ game.MarioLevelSelectEntity = me.Entity.extend({
             }
             else if(me.input.isKeyPressed('right'))
             {
-                this.renderable.flipX(false);
                 this.body.force.x = this.body.maxVel.x;
+                if(!this.renderable.isCurrentAnimation("walk"))
+                {
+                this.renderable.setCurrentAnimation("walk");
+                }
+                
+            }
+            else if(me.input.isKeyPressed('down'))
+            {
+                this.body.force.y = this.body.maxVel.y;
                 if(!this.renderable.isCurrentAnimation("walk"))
                 {
                 this.renderable.setCurrentAnimation("walk");
@@ -357,14 +352,22 @@ game.MarioLevelSelectEntity = me.Entity.extend({
                 this.renderable.setCurrentAnimation("stand");
                 }
             }
-       if (me.input.isKeyPressed('jump')) 
-      {
-          this.body.force.y = this.body.maxVel.y;
-      } 
-        else 
-      {
-          this.body.force.y = 0;
-      }
+        if (me.input.isKeyPressed('jump'))
+            if (!this.body.jumping && !this.body.falling && !this.body.jumping == 1)
+            {
+                // --- Sets Jumping to 0, so mario can jump
+                //this.body.jumping = 0;
+                // set current vel to the maximum defined value
+                // gravity will then do the rest
+                this.body.force.y = -this.body.maxVel.y
+            }
+            else 
+            {
+                this.body.force.y = 0;
+                // --- Sets Jumping to 1, so Mario cant jump mid air
+                //this.body.jumping = 1;
+            }
+
         // apply physics to the body (this moves the entity)
         this.body.update(dt);
 
@@ -381,7 +384,7 @@ game.MarioLevelSelectEntity = me.Entity.extend({
      */
     onCollision : function (response, other) {
         
-         switch(response.b.body.collisionType)
+        switch(response.b.body.collisionType)
         {
                 
             case me.collision.types.WORLD_SHAPE:
@@ -399,37 +402,11 @@ game.MarioLevelSelectEntity = me.Entity.extend({
                      //Do not repond to the platform pass through
                      return false;
                  }
-                break;
-            case me. collision.types.ENEMY_OBJECT:
-                    if( (response.overlapV.y > 0) && !this.body.jumping)
-                        {
-                            // make sure were on top of the other object
-                            this.pos.y = other.pos.y - this.height - 2;
-                            
-                            //bounce (force jump)
-                            this.body.falling = false
-                            this.body.vel.y = -this.body.maxVel.y * me.timer.tick;
-                            
-                            //set the jumping flag
-                            this.body.jumping = true;                           
-                        }
-                        else
-                        {
-                            this.renderable.flicker(750);
-                        }
-                    
-            default:
-                    //Do not respond to other objects (e.g.Coins)
-                    return false;
-        }
-        
         // Make all other objects solid
         return true;
     
     }
-});
-
-       
+}});
         
         
         
