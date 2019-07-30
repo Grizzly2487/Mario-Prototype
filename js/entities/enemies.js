@@ -1,8 +1,9 @@
 /**
  * Player Entity
  */
-game.EnemyEntity = me.Entity.extend({
-
+game.KoopaEntity = me.Entity.extend(
+    
+{
     /**
      * constructor
      */
@@ -13,11 +14,11 @@ game.EnemyEntity = me.Entity.extend({
         var width = settings.width
         
         //define this here instead instead of tiled   
-        settings.image ="wheelie_right";
+        settings.image ="Turtle.png";
         
         //adjust the setting information to match sprite size
-        settings.framewidth = settings.width = 64;
-        settings.frameheight = settings.height = 64;
+        settings.framewidth = settings.width = 17;
+        settings.frameheight = settings.height = 27;
         
         // call the parent constructor
         this._super(me.Entity, 'init', [x, y, settings]);
@@ -28,7 +29,7 @@ game.EnemyEntity = me.Entity.extend({
         this.body.addShape(new me.Rect(0,0,this.width,this.height));
         
         this.body.setMaxVelocity(3,15);
-        this.body.setFriction(0.4, 0);
+        this.body.setFriction(0.7, 0);
         //enable physic collision (off by default for basic me.Renderable
         this.isKinematic = false;
         
@@ -95,7 +96,7 @@ game.EnemyEntity = me.Entity.extend({
             if(this.alive && (response.overlapV.y > 0)&& 
                 response.a.body.falling)
             {
-                // this.renderable.flicker(750)
+                //this.renderable.flicker(750)
             }
                 return false;
         }
@@ -105,7 +106,7 @@ game.EnemyEntity = me.Entity.extend({
     }
 });
 
-game.CoinEntity = me.CollectableEntity.extend({
+/*game.CoinEntity = me.CollectableEntity.extend({
 
      // extending the init function is not mandatory
     //unles you need to add some extra initialization
@@ -130,13 +131,12 @@ game.CoinEntity = me.CollectableEntity.extend({
 });
 
 game.KoopaEntity = me.Entity.extend({
-    /**
      * constructor
-     */
+    */
     
-    init:function (x, y, settings) {
+    //init:function (x, y, settings) {
         // call the constructor
-        this._super(me.Entity, 'init', [x, y , settings]);
+        /*this._super(me.Entity, 'init', [x, y , settings]);
         
         this.body.setMaxVelocity(3,15);
         this.body.setFriction(0.4, 0);
@@ -150,14 +150,14 @@ game.KoopaEntity = me.Entity.extend({
     /**
      * update the entity
      */
-    update : function (dt) {
+    //update : function (dt) {
         //if(me.)
         //{
             //this.body.force.x = -this.body.maxVel.x;    
         //}
          //else
         //{
-            this.body.force.x = this.body.maxVel.x;
+            /*this.body.force.x = this.body.maxVel.x;
         //}
         // apply physics to the body (this moves the entity)
         this.body.update(dt);
@@ -173,11 +173,11 @@ game.KoopaEntity = me.Entity.extend({
      * colision handler
      * (called when colliding with other objects)
      */
-    onCollision : function (response, other) {
+    //onCollision : function (response, other) {
         // Make all other objects solid
-        return true;
-    }
-});
+        //return true;
+    
+//});
 
 game.GoombaEntity = me.Entity.extend({
     /**
@@ -191,11 +191,11 @@ game.GoombaEntity = me.Entity.extend({
         var width = settings.width
         
         //define this here instead instead of tiled   
-        settings.image ="wheelie_right";
+        settings.image ="Goomba.png";
         
         //adjust the setting information to match sprite size
-        settings.framewidth = settings.width = 64;
-        settings.frameheight = settings.height = 64;
+        settings.framewidth = settings.width = 17;
+        settings.frameheight = settings.height = 27;
         
         // call the parent constructor
         this._super(me.Entity, 'init', [x, y, settings]);
@@ -206,7 +206,7 @@ game.GoombaEntity = me.Entity.extend({
         this.body.addShape(new me.Rect(0,0,this.width,this.height));
         
         this.body.setMaxVelocity(3,15);
-        this.body.setFriction(0.4, 0);
+        this.body.setFriction(0.7, 0);
         //enable physic collision (off by default for basic me.Renderable
         this.isKinematic = false;
         
@@ -274,7 +274,7 @@ game.GoombaEntity = me.Entity.extend({
             if(this.alive && (response.overlapV.y > 0)&& 
                 response.a.body.falling)
             {
-                this.renderable.flicker(750)
+                //this.renderable.flicker(750)
             }
                 return false;
         }
