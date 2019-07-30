@@ -296,7 +296,7 @@ game.PirhanaPlant = me.Entity.extend({
 
          // adjust the size setting information to match the sprite size
          // so that the entity object is created with the right size
-         settings.framewidth = settings.width = 64;
+         settings.framewidth = settings.width = 16;
          settings.frameheight = settings.height = 64;
 
          // call the parent constructor
@@ -305,18 +305,18 @@ game.PirhanaPlant = me.Entity.extend({
          // add a physic body
          this.body = new me.Body(this);
          // add a default collision shape
-         this.body.addShape(new me.Rect(0, 0, this.width, this.height));
+         this.body.addShape(new me.Rect(1, 4, this.width, this.height));
          // configure max speed and friction
-         this.body.setMaxVelocity(0, 6);
+         this.body.setMaxVelocity(0, 1);
          
          // enable physic collision (off by default for basic me.Renderable)
          this.isKinematic = false;
 
          // set start/end position based on the initial area size
          //Must be changed for plant
-         x = this.pos.x;
-         this.startX = x;
-         this.pos.x = this.endX = x + width - this.width;
+         y = this.pos.y;
+         this.startY = y;
+         this.pos.y = this.endY = y + width - this.width;
          //this.pos.x  = x + width - this.width;
 
          // to remember which side we were walking
@@ -333,15 +333,15 @@ game.PirhanaPlant = me.Entity.extend({
   {
       if(this.alive)
       {
-          if(this.walkLeft && this.pos.x <= this.startX)
+          if(this.walkLeft && this.pos.y <= this.startY)
           {
               this.walkLeft = false;
-              this.body.force.x = this.body.maxVel.x;
+              this.body.force.y = this.body.maxVel.y;
           }
-          else if(!this.walkLeft && this.pos.x >= this.endX)
+          else if(!this.walkLeft && this.pos.y >= this.endY)
           {
               this.walkLeft = true;
-              this.body.force.x = -this.body.maxVel.x;
+              this.body.force.y = -this.body.maxVel.y;
           }
           this.flipX(this.walkLeft);
       }
@@ -367,9 +367,11 @@ game.PirhanaPlant = me.Entity.extend({
    * (called when colliding with other objects)
    */
   onCollision : function (response, other) {
+      return false;
       
       if(response.b.body.collisionType !== me.collision.types.WORLD_SHAPE)
       {
+          
           //res.y >0 this means touched by something on the bottom
           // which means at top position for this one
           
@@ -377,7 +379,7 @@ game.PirhanaPlant = me.Entity.extend({
           {
               //this.renderable.flicker(750);
           }
-          return false;
+          return true;
       }
       
     // Make all other objects solid
