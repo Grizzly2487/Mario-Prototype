@@ -300,7 +300,7 @@ game.PirhanaPlant = me.Entity.extend({
          settings.frameheight = settings.height = 64;
 
          // call the parent constructor
-         this._super(me.Sprite, 'init', [x, y , settings]);
+         this._super(me.Entity, 'init', [x, y , settings]);
 
          // add a physic body
          this.body = new me.Body(this);
