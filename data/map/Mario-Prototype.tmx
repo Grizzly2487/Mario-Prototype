@@ -428,7 +428,7 @@
    </properties>
    <polygon points="0.666667,0 17,0 17.3333,17 1,17"/>
   </object>
-  <object id="302" name="PirhanaPlant" x="358.666" y="387" width="16" height="62">
+  <object id="302" name="PirhanaPlant" x="358.999" y="391" width="16" height="62">
    <properties>
     <property name="framewidth" value="16"/>
     <property name="image" value="PirhanaPlant"/>
@@ -490,13 +490,13 @@
     <property name="image" value="Goomba"/>
    </properties>
   </object>
-  <object id="325" name="PirhanaPlant" x="1799" y="405.333" width="16" height="62">
+  <object id="325" name="PirhanaPlant" x="1799" y="406.666" width="16" height="62">
    <properties>
     <property name="framewidth" value="16"/>
     <property name="image" value="PirhanaPlant"/>
    </properties>
   </object>
-  <object id="326" name="PirhanaPlant" x="1863.33" y="389" width="16" height="62">
+  <object id="326" name="PirhanaPlant" x="1863" y="390" width="16" height="62">
    <properties>
     <property name="framewidth" value="16"/>
     <property name="image" value="PirhanaPlant"/>
