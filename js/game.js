@@ -36,6 +36,8 @@ var game = {
         me.pool.register("Turtle", game.KoopaEntity);
         me.pool.register("ItemBlocks", game.ItemBlocksEntity);
         me.pool.register("PirhanaPlant", game.PirhanaPlant);
+        me.pool.register("Level1", game.Level1);
+        me.pool.register("MarioLevelSelect", game.MarioLevelSelectEntity);
 
         
         //enable the keyboard
