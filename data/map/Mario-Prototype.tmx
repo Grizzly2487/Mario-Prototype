@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.2" tiledversion="1.2.4" orientation="orthogonal" renderorder="right-down" width="178" height="46" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#ffffff" nextlayerid="17" nextobjectid="315">
+<map version="1.2" tiledversion="1.2.4" orientation="orthogonal" renderorder="right-down" width="178" height="46" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#ffffff" nextlayerid="17" nextobjectid="325">
  <tileset firstgid="1" source="Super_Mario_3_Mario_World1_Map1.tsx"/>
  <tileset firstgid="8011" source="sma4_tiles.tsx"/>
  <tileset firstgid="9361" source="BreakableBlocks.tsx"/>
@@ -428,69 +428,66 @@
    </properties>
    <polygon points="0.666667,0 17,0 17.3333,17 1,17"/>
   </object>
-  <object id="139" name="Turtle" type="Turtle" x="1983" y="367">
-   <properties>
-    <property name="frameheight" value="27"/>
-    <property name="framewidth" value="17"/>
-    <property name="image" value="Turtle"/>
-   </properties>
-   <polygon points="0.666667,-0.333333 64.3333,-0.05882 64.6667,33.3333 0.222227,33.3333"/>
-  </object>
-  <object id="141" name="Goomba" type="Goomba" x="2380.5" y="432.75">
-   <properties>
-    <property name="framewidth" value="16"/>
-    <property name="image" value="Goomba"/>
-   </properties>
-   <polygon points="20,-1.75 337,-1.75 337,15.75 19.8235,15.3125"/>
-  </object>
-  <object id="150" name="Goomba" type="Goomba" x="665" y="416">
-   <properties>
-    <property name="framewidth" value="16"/>
-    <property name="image" value="Goomba"/>
-   </properties>
-   <polygon points="24,0 422,1 422,17 23.8235,16.5"/>
-  </object>
-  <object id="151" name="Goomba" type="Goomba" x="375" y="445">
-   <properties>
-    <property name="framewidth" value="16"/>
-    <property name="image" value="Goomba"/>
-   </properties>
-   <polygon points="14,0 240,0.888893 240,15.1111 14.1176,16"/>
-  </object>
-  <object id="152" name="Turtle" type="Turtle" x="1334.5" y="319">
-   <properties>
-    <property name="frameheight" value="27"/>
-    <property name="framewidth" value="17"/>
-    <property name="image" value="Turtle"/>
-   </properties>
-   <polygon points="0,0 103,0.94118 103,33 -0.27778,33"/>
-  </object>
-  <object id="153" name="Turtle" type="Turtle" x="508.392" y="303">
-   <properties>
-    <property name="frameheight" value="27"/>
-    <property name="framewidth" value="17"/>
-    <property name="image" value="Turtle"/>
-   </properties>
-   <polygon points="3.93862,1 68.2745,1.27451 68.2745,33 3.77451,33"/>
-  </object>
-  <object id="154" name="Turtle" type="Turtle" x="1144.59" y="424">
-   <properties>
-    <property name="frameheight" value="27"/>
-    <property name="framewidth" value="17"/>
-    <property name="image" value="Turtle"/>
-   </properties>
-   <polygon points="6.57512,2 115.411,1.94118 115.411,33 6.41176,33"/>
-  </object>
-  <object id="302" name="PirhanaPlant" x="1799" y="402" width="16" height="62">
+  <object id="302" name="PirhanaPlant" x="359.333" y="385.333" width="16" height="62">
    <properties>
     <property name="framewidth" value="16"/>
     <property name="image" value="PirhanaPlant"/>
    </properties>
   </object>
-  <object id="312" name="PirhanaPlant" x="1863.33" y="385" width="16" height="62">
+  <object id="315" name="Turtle" type="Turtle" x="512" y="304" width="64.3333" height="32">
    <properties>
+    <property name="frameheight" value="27"/>
+    <property name="framewidth" value="17"/>
+    <property name="image" value="Turtle"/>
+   </properties>
+  </object>
+  <object id="316" name="Turtle" type="Turtle" x="1179" y="428" width="64.3333" height="32">
+   <properties>
+    <property name="frameheight" value="27"/>
+    <property name="framewidth" value="17"/>
+    <property name="image" value="Turtle"/>
+   </properties>
+  </object>
+  <object id="317" name="Turtle" type="Turtle" x="1359.67" y="319.667" width="64.3333" height="32">
+   <properties>
+    <property name="frameheight" value="27"/>
+    <property name="framewidth" value="17"/>
+    <property name="image" value="Turtle"/>
+   </properties>
+  </object>
+  <object id="318" name="Turtle" type="Turtle" x="1968" y="368" width="64.3333" height="32">
+   <properties>
+    <property name="frameheight" value="27"/>
+    <property name="framewidth" value="17"/>
+    <property name="image" value="Turtle"/>
+   </properties>
+  </object>
+  <object id="321" name="Goomba" type="Goomba" x="408" y="440.667" width="95.6667" height="15.6667">
+   <properties>
+    <property name="frameheight" value="16"/>
     <property name="framewidth" value="16"/>
-    <property name="image" value="PirhanaPlant"/>
+    <property name="image" value="Goomba"/>
+   </properties>
+  </object>
+  <object id="322" name="Goomba" type="Goomba" x="736" y="426" width="144.667" height="15.6667">
+   <properties>
+    <property name="frameheight" value="16"/>
+    <property name="framewidth" value="16"/>
+    <property name="image" value="Goomba"/>
+   </properties>
+  </object>
+  <object id="323" name="Goomba" type="Goomba" x="895.667" y="425" width="144.667" height="15.6667">
+   <properties>
+    <property name="frameheight" value="16"/>
+    <property name="framewidth" value="16"/>
+    <property name="image" value="Goomba"/>
+   </properties>
+  </object>
+  <object id="324" name="Goomba" type="Goomba" x="2570.67" y="432.667" width="95.6667" height="15.6667">
+   <properties>
+    <property name="frameheight" value="16"/>
+    <property name="framewidth" value="16"/>
+    <property name="image" value="Goomba"/>
    </properties>
   </object>
  </objectgroup>
