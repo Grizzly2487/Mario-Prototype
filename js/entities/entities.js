@@ -215,6 +215,12 @@ game.OneUpEntity = me.CollectableEntity.extend({
     init:function (x, y, settings) {
         // call the  parent constructor
         this._super(me.CollectableEntity, 'init', [x, y, settings]);
+        
+        var width = settings.width;
+        settings.image ="1-UP";
+        settings.framewidth = settings.width = 16;
+        settings.frameheight = settings.height = 16;
+        
     },
     //this function is called by the engine
     //an object is touched by something (here collected)
@@ -230,7 +236,7 @@ game.OneUpEntity = me.CollectableEntity.extend({
         return false;
     }
 });
-/*game.LeafEntity = me.CollectableEntity.extend({
+game.LeafEntity = me.CollectableEntity.extend({
 
      // extending the init function is not mandatory
     //unles you need to add some extra initialization
@@ -243,7 +249,8 @@ game.OneUpEntity = me.CollectableEntity.extend({
     //an object is touched by something (here collected)
     onCollision : function (response, other){
         //do something when collected
-        //insert animation here     
+        game.data.score +=1;
+        //insert animation here  
         //make sure is not collected again
         this.body.setCollisionMask(me.collision.types.NO_OBJECT);
             
@@ -266,6 +273,7 @@ game.MushroomEntity = me.CollectableEntity.extend({
     //an object is touched by something (here collected)
     onCollision : function (response, other){
         //do something when collected
+        game.data.score +=1;
         //insert animation here      
         //make sure is not collected again
         this.body.setCollisionMask(me.collision.types.NO_OBJECT);
@@ -379,7 +387,6 @@ game.ItemBlocksEntity = me.Entity.extend({
     /**
      * constructor
      */
-    
     init:function (x, y, settings)
     {
         // call the constructor
