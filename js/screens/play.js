@@ -5,7 +5,7 @@ game.PlayScreen = me.ScreenObject.extend({
     onResetEvent: function() {
         // reset the score
         game.data.score = 0;
-        
+        game.data.lives = 5;
 
         
 
