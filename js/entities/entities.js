@@ -128,7 +128,18 @@ game.PlayerEntity = me.Entity.extend({
                      //Do not repond to the platform pass through
                      return false;
                  }
-                 break;
+                if(other.type === "TeleporterIn")
+                 {
+                     this.pos.x = 2271, 
+                     this.pos.y = 589;
+                 }
+                if(other.type === "TeleporterOut")
+                 {
+                     this.pos.x = 2336;
+                     this.pos.y = 416;
+                 }
+                break;
+                
                 case me. collision.types.ENEMY_OBJECT:
                     if( (response.overlapV.y > 0) && !this.body.jumping)
                         {
