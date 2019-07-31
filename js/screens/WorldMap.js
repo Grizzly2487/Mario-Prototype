@@ -3,7 +3,7 @@ game.WorldMap = me.ScreenObject.extend({
      *  action to perform on state change
      */
     onResetEvent: function() {
-        ; // TODO
+        // TODO
         me.levelDirector.loadLevel("World Select");
         me.audio.playTrack("World1BGM");
 

@@ -12,7 +12,7 @@ game.PlayerEntity = me.Entity.extend({
         // call the constructor
         this._super(me.Entity, 'init', [x, y, settings]);
         
-        this.body.setMaxVelocity(1.5,13);
+        this.body.setMaxVelocity(2,15);
         this.body.setFriction(0.4, 0);
         
         //set the display to follow our position on both axis
@@ -129,19 +129,23 @@ game.PlayerEntity = me.Entity.extend({
                      //Do not repond to the platform pass through
                      return false;
                  }
-                if(other.type === "TeleporterIn")
-                 {
-                     this.pos.x = 2271, 
-                     this.pos.y = 589;
-                 }
+                if(other.type === "TeleporterIn" && me.input.isKeyPressed('down'))
+                    {
+                        this.pos.x = 2271, 
+                        this.pos.y = 589;
+                    }
                 if(other.type === "TeleporterOut")
                  {
                      this.pos.x = 2336;
                      this.pos.y = 416;
                  }
+                if(other.type === "TeleporterUp")
+                 {
+                     this.pos.x = 2271;
+                     this.pos.y = 137;
+                 }
                 break;
-                
-                case me. collision.types.ENEMY_OBJECT:
+                case me.collision.types.ENEMY_OBJECT:
                 if(other.type === "ItemBlock")
                  {
                      //other.type ="ItemBlockEmpty";
@@ -169,9 +173,14 @@ game.PlayerEntity = me.Entity.extend({
                         }
                         else
                         {
-                        
-                        this.renderable.flicker(750);
+                            this.renderable.flicker(300);
+                            //me.levelDirector.loadLevel("Mario-Prototype");
+					        //game.data.lives -= 1;
                         }
+                        //if (game.data.lives === 0)
+                        //{
+                            //me.levelDirector.loadLevel("World Select");
+                        //}
                         
 
             default:
@@ -198,7 +207,8 @@ game.CoinEntity = me.CollectableEntity.extend({
     //an object is touched by something (here collected)
     onCollision : function (response, other){
         //do something when collected
-         game.data.score +=100;
+        game.data.score +=100;
+        
         //make sure is not collected again
         this.body.setCollisionMask(me.collision.types.NO_OBJECT);
             
@@ -253,8 +263,7 @@ game.LeafEntity = me.CollectableEntity.extend({
         game.data.score +=100;
         //insert animation here  
         //make sure is not collected again
-        this.body.setCollisionMask(me.collision.types.NO_OBJECT);
-            
+        this.body.setCollisionMask(me.collision.types.NO_OBJECT);   
         //remove it
         me.game.world.removeChild(this);
             
