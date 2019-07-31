@@ -145,6 +145,11 @@ game.resources = [
         "src": "data/img/sprite/Turtle.png"
     },
     {
+        "name": "UsedItemBlock",
+        "type": "image",
+        "src": "data/img/sprite/UsedItemBlock.png"
+    },
+    {
         "name": "Mario-Prototype",
         "type": "tmx",
         "src": "data/map/Mario-Prototype.tmx"

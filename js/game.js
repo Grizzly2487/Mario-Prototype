@@ -27,8 +27,10 @@ var game = {
 
     // Run on game resources loaded.
     "loaded" : function () {
+        me.debug.renderHitBox = true;
         me.state.set(me.state.WORLDMAP, new game.WorldMap());
         me.state.set(me.state.PLAY, new game.PlayScreen());
+        //me.state.set(me.state.TITLE, new game.StartScreen());
 
         // add our player entity in the entity pool
         me.pool.register("Mario", game.PlayerEntity);       
@@ -38,7 +40,7 @@ var game = {
         me.pool.register("ItemBlocks", game.ItemBlocksEntity);
         me.pool.register("PirhanaPlant", game.PirhanaPlant);
         me.pool.register("MarioLevelSelect", game.MarioLevelSelectEntity);
-        me.pool.register("1-UP", game.OneUpEntity);
+        me.pool.register("OneUp", game.OneUpEntity);
         me.pool.register("Mushroom", game.MushroomEntity);
         me.pool.register("Leaf", game.LeafEntity);
 
@@ -47,6 +49,7 @@ var game = {
         me.input.bindKey(me.input.KEY.LEFT, "left");
         me.input.bindKey(me.input.KEY.RIGHT, "right");
         me.input.bindKey(me.input.KEY.DOWN, "down");
+        me.input.bindKey(me.input.KEY.SHIFT, "shift");
        
         //Jump
         me.input.bindKey(me.input.KEY.SPACE, "jump", true);

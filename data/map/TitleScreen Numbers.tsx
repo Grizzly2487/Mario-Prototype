@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tileset version="1.2" tiledversion="1.2.4" name="TitleScreen Numbers" tilewidth="16" tileheight="16" tilecount="60" columns="15">
- <image source="TitleScreen Numbers.png" width="255" height="66"/>
+ <image source="../img/map/TitleScreen Numbers.png" width="255" height="66"/>
  <tile id="0">
   <animation>
    <frame tileid="0" duration="100"/>

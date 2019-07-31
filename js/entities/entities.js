@@ -7,6 +7,8 @@ game.PlayerEntity = me.Entity.extend({
      * constructor
      */
     init:function (x, y, settings) {
+
+        this.settings = settings;
         // call the constructor
         this._super(me.Entity, 'init', [x, y, settings]);
         
@@ -63,7 +65,6 @@ game.PlayerEntity = me.Entity.extend({
                 {
                 this.renderable.setCurrentAnimation("walk");
                 }
-                
             }
             else
             {
@@ -197,7 +198,7 @@ game.CoinEntity = me.CollectableEntity.extend({
     //an object is touched by something (here collected)
     onCollision : function (response, other){
         //do something when collected
-         game.data.score +=100;      
+         game.data.score +=100;
         //make sure is not collected again
         this.body.setCollisionMask(me.collision.types.NO_OBJECT);
             
@@ -214,12 +215,12 @@ game.OneUpEntity = me.CollectableEntity.extend({
      
     init:function (x, y, settings) {
         // call the  parent constructor
-        this._super(me.CollectableEntity, 'init', [x, y, settings]);
         
         var width = settings.width;
         settings.image ="1-UP";
         settings.framewidth = settings.width = 16;
         settings.frameheight = settings.height = 16;
+        this._super(me.CollectableEntity, 'init', [x, y, settings]);
         
     },
     //this function is called by the engine
@@ -249,7 +250,7 @@ game.LeafEntity = me.CollectableEntity.extend({
     //an object is touched by something (here collected)
     onCollision : function (response, other){
         //do something when collected
-        game.data.score +=1;
+        game.data.score +=100;
         //insert animation here  
         //make sure is not collected again
         this.body.setCollisionMask(me.collision.types.NO_OBJECT);
@@ -273,7 +274,7 @@ game.MushroomEntity = me.CollectableEntity.extend({
     //an object is touched by something (here collected)
     onCollision : function (response, other){
         //do something when collected
-        game.data.score +=1;
+        game.data.score +=100;
         //insert animation here      
         //make sure is not collected again
         this.body.setCollisionMask(me.collision.types.NO_OBJECT);
@@ -283,106 +284,7 @@ game.MushroomEntity = me.CollectableEntity.extend({
             
         return false
     }
-});
-/*game.KoopaEntity = me.Entity.extend({
-    /**
-     * constructor
-     */
-    
-    /*init:function (x, y, settings) {
-        // call the constructor
-        this._super(me.Entity, 'init', [x, y , settings]);
-        
-        this.body.setMaxVelocity(3,15);
-        this.body.setFriction(0.4, 0);
-        
-        //ensure the player is updated even when outside of the viewport
-        this.alwaysUpdate = true;
-        
-        //TODO: add an animation to player
-    },
-
-    /**
-     * update the entity
-     */
-    /*update : function (dt) {
-        //if(me.)
-        //{
-            //this.body.force.x = -this.body.maxVel.x;    
-        //}
-         //else
-        //{
-            this.body.force.x = this.body.maxVel.x;
-        //}
-        // apply physics to the body (this moves the entity)
-        this.body.update(dt);
-
-        // handle collisions against other shapes
-        me.collision.check(this);
-
-        // return true if we moved or if the renderable was updated
-        return (this._super(me.Entity, 'update', [dt]) || this.body.vel.x !== 0 || this.body.vel.y !== 0);
-    },
-
-   /**
-     * colision handler
-     * (called when colliding with other objects)
-     */
-    /*onCollision : function (response, other) {
-        // Make all other objects solid
-        return true;
-    }
-});
-
-game.GoombaEntity = me.Entity.extend({
-    /**
-     * constructor
-     */
-    
-    /*init:function (x, y, settings) {
-        // call the constructor
-        this._super(me.Entity, 'init', [x, y , settings]);
-        
-        this.body.setMaxVelocity(3,15);
-        this.body.setFriction(0.4, 0); 
-        //ensure the player is updated even when outside of the viewport
-        this.alwaysUpdate = true;
-        
-        //TODO: add an animation to player
-    },
-
-    /**
-     * update the entity
-     */
-    /*update : function (dt) {
-        //if(me.)
-        //{
-            //this.body.force.x = -this.body.maxVel.x;    
-        //}
-         //else
-        //{
-            this.body.force.x = this.body.maxVel.x;
-        //}
-        // apply physics to the body (this moves the entity)
-        this.body.update(dt);
-
-        // handle collisions against other shapes
-        me.collision.check(this);
-
-        // return true if we moved or if the renderable was updated
-        return (this._super(me.Entity, 'update', [dt]) || this.body.vel.x !== 0 || this.body.vel.y !== 0);
-    },
-
-   /**
-     * colision handler
-     * (called when colliding with other objects)
-     */
-    //onCollision : function (response, other) {
-        // Make all other objects solid
-        //return true;
-    //}
-//});       
-        
+});       
 game.ItemBlocksEntity = me.Entity.extend({
     /**
      * constructor
