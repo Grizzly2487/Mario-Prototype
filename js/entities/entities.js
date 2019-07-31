@@ -23,12 +23,12 @@ game.PlayerEntity = me.Entity.extend({
         //TODO: Add Animation to player
         
         //define a basic animation (using all frames)
-        this.renderable.addAnimation("walk", [0,1,2])
+        this.renderable.addAnimation("walk", [0,1,2]);
         
-        this.renderable.addAnimation("stand", [0])
+        this.renderable.addAnimation("stand", [0]);
         
         //set standing animation as default  
-        this.renderable.setCurrentAnimation("stand")
+        this.renderable.setCurrentAnimation("stand");
     },
     
     /**
@@ -40,7 +40,10 @@ game.PlayerEntity = me.Entity.extend({
         if(me.input.isKeyPressed('left'))
             {
                 this.renderable.flipX(true);
+                
+                //update the entity velocity
                 this.body.force.x = -this.body.maxVel.x;
+                
                 //change to walking animation
                 if(!this.renderable.isCurrentAnimation("walk"))
                 {
@@ -49,8 +52,13 @@ game.PlayerEntity = me.Entity.extend({
             }
             else if(me.input.isKeyPressed('right'))
             {
+                //unflip the sprite
                 this.renderable.flipX(false);
+                
+                //update the entity velocity
                 this.body.force.x = this.body.maxVel.x;
+                
+                //change to walking animation
                 if(!this.renderable.isCurrentAnimation("walk"))
                 {
                 this.renderable.setCurrentAnimation("walk");
@@ -59,29 +67,35 @@ game.PlayerEntity = me.Entity.extend({
             }
             else
             {
+                
                 this.body.force.x = 0;
-                if(!this.renderable.isCurrentAnimation("stand"))
-                {
+                
+                //change to the standing animation
+                //if(!this.renderable.isCurrentAnimation("stand"))
+                //{
                 this.renderable.setCurrentAnimation("stand");
-                }
+                //}
             }
-       if (me.input.isKeyPressed('jump')) 
-      {
-          if (!this.body.jumping && !this.body.falling && !this.body.jumping == 1)
-          {
+            if (me.input.isKeyPressed('jump')) 
+            {
+            if (!this.body.jumping && !this.body.falling) 
+              //&& !this.body.jumping == 1)
+            {
               // --- Sets Jumping to 0, so mario can jump
-              this.body.jumping = 0;
+              this.body.vel.y = - this.body.maxVel.y * me.timer.tick;
+              
+              this.body.jumping = true;
               // set current vel to the maximum defined value
               // gravity will then do the rest
-              this.body.force.y = -this.body.maxVel.y
-          }
+              //this.body.force.y = -this.body.maxVel.y
+            }
       } 
-        else 
+        /*else 
       {
           this.body.force.y = 0;
           // --- Sets Jumping to 1, so Mario cant jump mid air
           this.body.jumping = 1;
-      }
+      }*/
         // apply physics to the body (this moves the entity)
         this.body.update(dt);
 
@@ -104,11 +118,12 @@ game.PlayerEntity = me.Entity.extend({
             case me.collision.types.WORLD_SHAPE:
                 
                 //simulate platform object
+                
                 if(other.type === "platform")
                  {
-                     if(this.body.falling && !me.input.isKeyPressed('down') && response.overlapV.y > 0 && ~~this.body.vel.y >= ~~response.overlapV.y)
-                     {
-                         response.overlapV.x = 0;
+                     if (this.body.falling && !me.input.isKeyPressed('down') && (response.overlapV.y > 0) && (~~this.body.vel.y >= ~~response.overlapV.y))
+                    {
+                    response.overlapV.x = 0;
                          //respond to the platform it is solid
                     // Make all other objects solid
                     return true;
@@ -116,8 +131,8 @@ game.PlayerEntity = me.Entity.extend({
                      //Do not repond to the platform pass through
                      return false;
                  }
-                break;
-            case me. collision.types.ENEMY_OBJECT:
+                 break;
+                case me. collision.types.ENEMY_OBJECT:
                     if( (response.overlapV.y > 0) && !this.body.jumping)
                         {
                             // make sure were on top of the other object
