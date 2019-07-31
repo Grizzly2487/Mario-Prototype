@@ -21,49 +21,49 @@
   <object id="235" x="2238" y="480" width="18" height="14"/>
  </objectgroup>
  <objectgroup id="14" name="Boxes">
-  <object id="290" name="ItemBlocks" type="Item" x="240.167" y="352.167" width="16" height="16">
+  <object id="290" name="ItemBlocks" type="ItemBlock" x="240.167" y="352.167" width="16" height="16">
    <properties>
     <property name="framewidth" value="16"/>
     <property name="image" value="Boxes"/>
    </properties>
   </object>
-  <object id="292" name="ItemBlocks" type="Coin" x="223.667" y="352.167" width="16" height="16">
+  <object id="292" name="ItemBlocks" type="ItemBlock" x="223.667" y="352.167" width="16" height="16">
    <properties>
     <property name="framewidth" value="16"/>
     <property name="image" value="Boxes"/>
    </properties>
   </object>
-  <object id="293" name="ItemBlocks" type="Item" x="192.333" y="399.833" width="16" height="16">
+  <object id="293" name="ItemBlocks" type="ItemBlock" x="192.333" y="399.833" width="16" height="16">
    <properties>
     <property name="framewidth" value="16"/>
     <property name="image" value="Boxes"/>
    </properties>
   </object>
-  <object id="294" name="ItemBlocks" type="Coin" x="175.667" y="399.833" width="16" height="16">
+  <object id="294" name="ItemBlocks" type="ItemBlock" x="175.667" y="399.833" width="16" height="16">
    <properties>
     <property name="framewidth" value="16"/>
     <property name="image" value="Boxes"/>
    </properties>
   </object>
-  <object id="295" name="ItemBlocks" type="Item" x="416" y="367.833" width="16" height="16">
+  <object id="295" name="ItemBlocks" type="ItemBlock" x="416" y="367.833" width="16" height="16">
    <properties>
     <property name="framewidth" value="16"/>
     <property name="image" value="Boxes"/>
    </properties>
   </object>
-  <object id="296" name="ItemBlocks" type="Item" x="656.333" y="431.833" width="16" height="16">
+  <object id="296" name="ItemBlocks" type="ItemBlock" x="656.333" y="431.833" width="16" height="16">
    <properties>
     <property name="framewidth" value="16"/>
     <property name="image" value="Boxes"/>
    </properties>
   </object>
-  <object id="297" name="ItemBlocks" type="Coin" x="704" y="399.833" width="16" height="16">
+  <object id="297" name="ItemBlocks" type="ItemBlock" x="704" y="399.833" width="16" height="16">
    <properties>
     <property name="framewidth" value="16"/>
     <property name="image" value="Boxes"/>
    </properties>
   </object>
-  <object id="298" name="ItemBlocks" type="Item" x="1472" y="415.5" width="16" height="16">
+  <object id="298" name="ItemBlocks" type="ItemBlock" x="1472" y="415.5" width="16" height="16">
    <properties>
     <property name="framewidth" value="16"/>
     <property name="image" value="Boxes"/>

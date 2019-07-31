@@ -141,6 +141,12 @@ game.PlayerEntity = me.Entity.extend({
                 break;
                 
                 case me. collision.types.ENEMY_OBJECT:
+                if(other.type === "ItemBlock")
+                 {
+                     //other.type ="ItemBlockEmpty";
+                     return true;
+                 }
+                
                     if( (response.overlapV.y > 0) && !this.body.jumping)
                         {
                             // make sure were on top of the other object
@@ -152,11 +158,20 @@ game.PlayerEntity = me.Entity.extend({
                             
                             //set the jumping flag
                             this.body.jumping = true;                           
+                        game.data.score +=20;      
+                        //make sure is not collected again
+                        other.body.setCollisionMask(me.collision.types.NO_OBJECT);
+            
+                        //remove it
+                        me.game.world.removeChild(other);
+                        
                         }
                         else
                         {
-                            this.renderable.flicker(750);
+                        
+                        this.renderable.flicker(750);
                         }
+                        
 
             default:
                     //Do not respond to other objects (e.g.Coins)
