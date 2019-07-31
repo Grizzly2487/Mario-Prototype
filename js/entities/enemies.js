@@ -97,6 +97,7 @@ game.KoopaEntity = me.Entity.extend(
                 response.a.body.falling)
             {
                 //this.renderable.flicker(750)
+            
             }
                 return false;
         }
