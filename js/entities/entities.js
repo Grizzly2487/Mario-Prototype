@@ -169,7 +169,75 @@ game.CoinEntity = me.CollectableEntity.extend({
         return false
     }
 });
+game.OneUpEntity = me.CollectableEntity.extend({
 
+     // extending the init function is not mandatory
+    //unles you need to add some extra initialization
+     
+    init:function (x, y, settings) {
+        // call the  parent constructor
+        this._super(me.CollectableEntity, 'init', [x, y, settings]);
+    },
+    //this function is called by the engine
+    //an object is touched by something (here collected)
+    onCollision : function (response, other)
+    {
+        //do something when collected
+         game.data.lives +=1;      
+        //make sure is not collected again
+        this.body.setCollisionMask(me.collision.types.NO_OBJECT);
+        //remove it
+        me.game.world.removeChild(this);
+            
+        return false;
+    }
+});
+/*game.LeafEntity = me.CollectableEntity.extend({
+
+     // extending the init function is not mandatory
+    //unles you need to add some extra initialization
+     
+     init:function (x, y, settings) {
+        // call the  parent constructor
+        this._super(me.CollectableEntity, 'init', [x, y, settings]);
+    },
+    //this function is called by the engine
+    //an object is touched by something (here collected)
+    onCollision : function (response, other){
+        //do something when collected
+        //insert animation here     
+        //make sure is not collected again
+        this.body.setCollisionMask(me.collision.types.NO_OBJECT);
+            
+        //remove it
+        me.game.world.removeChild(this);
+            
+        return false
+    }
+});
+game.MushroomEntity = me.CollectableEntity.extend({
+
+     // extending the init function is not mandatory
+    //unles you need to add some extra initialization
+     
+     init:function (x, y, settings) {
+        // call the  parent constructor
+        this._super(me.CollectableEntity, 'init', [x, y, settings]);
+    },
+    //this function is called by the engine
+    //an object is touched by something (here collected)
+    onCollision : function (response, other){
+        //do something when collected
+        //insert animation here      
+        //make sure is not collected again
+        this.body.setCollisionMask(me.collision.types.NO_OBJECT);
+            
+        //remove it
+        me.game.world.removeChild(this);
+            
+        return false
+    }
+});
 /*game.KoopaEntity = me.Entity.extend({
     /**
      * constructor

@@ -38,6 +38,9 @@ var game = {
         me.pool.register("ItemBlocks", game.ItemBlocksEntity);
         me.pool.register("PirhanaPlant", game.PirhanaPlant);
         me.pool.register("MarioLevelSelect", game.MarioLevelSelectEntity);
+        me.pool.register("1-UP", game.OneUpEntity);
+        //me.pool.register("Mushroom", game.MushroomEntity);
+        //me.pool.register("Leaf", game.LeafEntity);
 
         
         //enable the keyboard
