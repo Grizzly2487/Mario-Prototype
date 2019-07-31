@@ -79,8 +79,8 @@ game.HUD.ScoreItem = me.Renderable.extend({
         // draw it baby !
          //this.pos.x, this.pos.y are the relative position from the screen right bottom
         //placement of the text
-        this.font.draw(context, game.data.score, 350, 25);
-        this.font.draw(context, "SCORE", 330, 25);
+        this.font.draw(context, game.data.score, 340, 25);
+        this.font.draw(context, "SCORE", 300, 25);
         
       
     }
@@ -136,8 +136,8 @@ game.HUD.LivesItem = me.Renderable.extend({
         // draw it baby !
          //this.pos.x, this.pos.y are the relative position from the screen right bottom
         //placement of the text
-        this.font.draw(context, game.data.lives, 275, 25);
-        this.font.draw(context, "Lives", 255, 25);
+        this.font.draw(context, game.data.lives, 240, 25);
+        this.font.draw(context, "Lives", 220, 25);
         
       
     }

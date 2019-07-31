@@ -10,7 +10,6 @@ game.PlayScreen = me.ScreenObject.extend({
         
 
         me.levelDirector.loadLevel("Mario-Prototype");
-        me.audio.playTrack("Level1Theme");
 
 
         // Add our HUD to the game world, add it last so that this is on top of the rest.

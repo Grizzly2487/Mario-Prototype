@@ -158,7 +158,7 @@ game.PlayerEntity = me.Entity.extend({
                             
                             //set the jumping flag
                             this.body.jumping = true;                           
-                        game.data.score +=20;      
+                        game.data.score +=100;      
                         //make sure is not collected again
                         other.body.setCollisionMask(me.collision.types.NO_OBJECT);
             
@@ -197,7 +197,7 @@ game.CoinEntity = me.CollectableEntity.extend({
     //an object is touched by something (here collected)
     onCollision : function (response, other){
         //do something when collected
-         game.data.score +=1;      
+         game.data.score +=100;      
         //make sure is not collected again
         this.body.setCollisionMask(me.collision.types.NO_OBJECT);
             
