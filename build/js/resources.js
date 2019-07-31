@@ -75,6 +75,11 @@ game.resources = [
         "src": "data/img/map/World Map1.png"
     },
     {
+        "name": "1-UP",
+        "type": "image",
+        "src": "data/img/sprite/1-UP.png"
+    },
+    {
         "name": "Boxes",
         "type": "image",
         "src": "data/img/sprite/Boxes.png"
@@ -105,6 +110,11 @@ game.resources = [
         "src": "data/img/sprite/Goomba.png"
     },
     {
+        "name": "Leaf",
+        "type": "image",
+        "src": "data/img/sprite/Leaf.png"
+    },
+    {
         "name": "Mario_01",
         "type": "image",
         "src": "data/img/sprite/Mario_01.png"
@@ -115,9 +125,19 @@ game.resources = [
         "src": "data/img/sprite/mario_walk_right.png"
     },
     {
+        "name": "Mushroom",
+        "type": "image",
+        "src": "data/img/sprite/Mushroom.png"
+    },
+    {
         "name": "PirhanaPlant",
         "type": "image",
         "src": "data/img/sprite/PirhanaPlant.png"
+    },
+    {
+        "name": "StarPower",
+        "type": "image",
+        "src": "data/img/sprite/StarPower.png"
     },
     {
         "name": "Turtle",
