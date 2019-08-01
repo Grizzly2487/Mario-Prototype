@@ -49,7 +49,7 @@ var game = {
         me.input.bindKey(me.input.KEY.LEFT, "left");
         me.input.bindKey(me.input.KEY.RIGHT, "right");
         me.input.bindKey(me.input.KEY.DOWN, "down");
-        me.input.bindKey(me.input.KEY.SHIFT, "shift");
+        me.input.bindKey(me.input.KEY.SHIFT, "run");
        
         //Jump
         me.input.bindKey(me.input.KEY.SPACE, "jump", true);

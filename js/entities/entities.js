@@ -12,7 +12,7 @@ game.PlayerEntity = me.Entity.extend({
         // call the constructor
         this._super(me.Entity, 'init', [x, y, settings]);
         
-        this.body.setMaxVelocity(2,15);
+        this.body.setMaxVelocity(1.7,13);
         this.body.setFriction(0.4, 0);
         
         //set the display to follow our position on both axis
@@ -39,6 +39,16 @@ game.PlayerEntity = me.Entity.extend({
 
     update : function (dt) 
     {
+        if(me.input.isKeyPressed('run'))
+        {
+            this.body.setMaxVelocity(2.2,12.2);
+            this.body.setFriction(0.4,0.3);
+        }
+        else{
+            this.body.setMaxVelocity(1.7,13);
+            this.body.setFriction(0.4, 0.3);
+        }
+            
         if(me.input.isKeyPressed('left'))
         {
             this.renderable.flipX(true);
