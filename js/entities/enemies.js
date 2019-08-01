@@ -347,7 +347,7 @@ game.PirhanaPlant = me.Entity.extend({
    */
   update : function (dt) 
   {
-	  return;
+	  
       if(this.alive)
       {
           if(this.walkLeft && this.pos.y <= this.startY)
