@@ -66,7 +66,7 @@ game.KoopaEntity = me.Entity.extend(
         }
         else
         {
-            this.body.force.x = 0 
+            this.body.force.x = 0; 
             
         }
             
@@ -303,6 +303,7 @@ game.PirhanaPlant = me.Entity.extend({
 
      init: function (x, y, settings)
      {
+
          // save the area size as defined in Tiled
          var width = settings.width;
 
@@ -346,6 +347,7 @@ game.PirhanaPlant = me.Entity.extend({
    */
   update : function (dt) 
   {
+	  return;
       if(this.alive)
       {
           if(this.walkLeft && this.pos.y <= this.startY)

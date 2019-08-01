@@ -10,6 +10,11 @@ game.resources = [
         "src": "data/bgm/"
     },
     {
+        "name": "1up",
+        "type": "audio",
+        "src": "data/sfx/"
+    },
+    {
         "name": "cling",
         "type": "audio",
         "src": "data/sfx/"
@@ -20,7 +25,17 @@ game.resources = [
         "src": "data/sfx/"
     },
     {
+        "name": "powerup",
+        "type": "audio",
+        "src": "data/sfx/"
+    },
+    {
         "name": "stomp",
+        "type": "audio",
+        "src": "data/sfx/"
+    },
+    {
+        "name": "warppipe",
         "type": "audio",
         "src": "data/sfx/"
     },
