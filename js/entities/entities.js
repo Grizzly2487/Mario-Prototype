@@ -86,6 +86,7 @@ game.PlayerEntity = me.Entity.extend({
                   // set current vel to the maximum defined value
                   // gravity will then do the rest
                   this.body.force.y = -this.body.maxVel.y
+                  me.audio.play("jump");
               }
             } 
             else 
@@ -164,6 +165,12 @@ game.PlayerEntity = me.Entity.extend({
                             //set the jumping flag
                             this.body.jumping = true;                           
                         game.data.score +=100;      
+                        
+                        me.audio.play("stomp");
+                        
+                            //onDestroyEvent: function() {
+                        
+                        
                         //make sure is not collected again
                         other.body.setCollisionMask(me.collision.types.NO_OBJECT);
             
@@ -208,7 +215,7 @@ game.CoinEntity = me.CollectableEntity.extend({
     onCollision : function (response, other){
         //do something when collected
         game.data.score +=100;
-        
+        me.audio.play("cling");
         //make sure is not collected again
         this.body.setCollisionMask(me.collision.types.NO_OBJECT);
             
