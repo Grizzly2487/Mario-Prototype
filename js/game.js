@@ -30,9 +30,9 @@ var game = {
         me.debug.renderHitBox = true;
         me.state.set(me.state.WORLDMAP, new game.WorldMap());
         me.state.set(me.state.PLAY, new game.PlayScreen());
-        //me.state.set(me.state.TITLE, new game.StartScreen());
+        me.state.set(me.state.TITLE, new game.StartScreen());
 
-        // add our player entity in the entity pool
+        // add our player/enemy/powerup/coin and object entities into the entity pool
         me.pool.register("Mario", game.PlayerEntity);       
         me.pool.register("Goomba", game.GoombaEntity);
         me.pool.register("Coins", game.CoinEntity);
@@ -43,6 +43,7 @@ var game = {
         me.pool.register("OneUp", game.OneUpEntity);
         me.pool.register("Mushroom", game.MushroomEntity);
         me.pool.register("Leaf", game.LeafEntity);
+        me.pool.register("DeathCollider", game.DeathColliderEntity);
 
         
         //enable the keyboard
@@ -58,6 +59,6 @@ var game = {
 
 
         // Start the game.
-        me.state.change(me.state.WORLDMAP);
+        me.state.change(me.state.TITLE);
     }    
 };

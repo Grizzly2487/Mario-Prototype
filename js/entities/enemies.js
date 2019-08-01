@@ -1,5 +1,5 @@
 /**
- * Player Entity
+ * Koopa Entity
  */
 game.KoopaEntity = me.Entity.extend(
     
@@ -106,63 +106,27 @@ game.KoopaEntity = me.Entity.extend(
         return true;
     }
 });
-
-/*game.CoinEntity = me.CollectableEntity.extend({
-
-     // extending the init function is not mandatory
-    //unles you need to add some extra initialization
-     
-     init:function (x, y, settings) {
-        // call the  parent constructor
-        this._super(me.CollectableEntity, 'init', [x, y, settings]);
-    },
-    //this function is called by the engine
-    //an object is touched by something (here collected)
-    onCollision : function (response, other){
-        //do something when collected
-            
-        //make sure is not collected again
-        this.body.setCollisionMask(me.collision.types.NO_OBJECT);
-            
-        //remove it
-        me.game.world.removeChild(this);
-            
-        return false
-    }
-});
-
-game.KoopaEntity = me.Entity.extend({
+//DeathCollision Entity for when mario falls off the map
+game.DeathColliderEntity = me.Entity.extend({
+    /**
      * constructor
-    */
+     */
     
-    //init:function (x, y, settings) {
+     init:function (x, y, settings) {
         // call the constructor
-        /*this._super(me.Entity, 'init', [x, y , settings]);
         
-        this.body.setMaxVelocity(3,15);
-        this.body.setFriction(0.4, 0);
-        
-        //ensure the player is updated even when outside of the viewport
-        this.alwaysUpdate = true;
-        
-        //TODO: add an animation to player
-    },
+        // save the area size as defined in tile
+        var width = settings.width
 
+        // call the parent constructor
+        this._super(me.Entity, 'init', [x, y, settings]);
+    },
+    
     /**
      * update the entity
      */
-    //update : function (dt) {
-        //if(me.)
-        //{
-            //this.body.force.x = -this.body.maxVel.x;    
-        //}
-         //else
-        //{
-            /*this.body.force.x = this.body.maxVel.x;
-        //}
-        // apply physics to the body (this moves the entity)
-        this.body.update(dt);
-
+    update : function (dt) 
+    {
         // handle collisions against other shapes
         me.collision.check(this);
 
@@ -171,15 +135,32 @@ game.KoopaEntity = me.Entity.extend({
     },
 
    /**
-     * colision handler
+     * collision handler
      * (called when colliding with other objects)
      */
-    //onCollision : function (response, other) {
+    onCollision : function (response, other) 
+    {
+        
+        if (response.b.body.collisionType !== me.collision.types.WORLD_SHAPE)
+        {
+            
+            //res.y>0 this means touched by something on the bottom
+            //which means top position for this one
+            
+            if(this.alive && (response.overlapV.y <= 0)&& 
+                response.a.body.falling)
+            {
+                //this.renderable.flicker(750)
+            }
+                return false;
+        }
+        
         // Make all other objects solid
-        //return true;
-    
-//});
+        return true;
 
+    }
+});
+//Goomba Entity
 game.GoombaEntity = me.Entity.extend({
     /**
      * constructor
@@ -298,7 +279,8 @@ game.GoombaEntity = me.Entity.extend({
         return true;
 
     }
-});       
+}); 
+//Pirhana Plant Entity
 game.PirhanaPlant = me.Entity.extend({
 
      init: function (x, y, settings)

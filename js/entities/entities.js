@@ -140,29 +140,51 @@ game.PlayerEntity = me.Entity.extend({
                      //Do not repond to the platform pass through
                      return false;
                  }
+                //Collision code for when mario falls off the map
+                if(other.type === "DeathCollider")
+                 {
+                    console.log("onDeathCollider");
+                    if(this.isAlive == true)
+                            {   //if marios lives reach below 0 resets the game
+                                this.isAlive = false;
+                                if (game.data.lives === 0)
+                                {   //Reset Score and lives back to normal
+                                    game.data.lives = 5;
+                                    game.data.score = 0;
+                                    me.levelDirector.loadLevel("World Select");
+                                }
+                                else
+                                {   //When mario has lost a life
+                                    me.levelDirector.loadLevel("Mario-Prototype");
+                                    game.data.lives -= 1;
+                                }
+                            }
+                 }
+                //Secret level pipe coding for transportation of mario to secret world
                 if(other.type === "TeleporterIn" && me.input.isKeyPressed('down'))
-                    {
+                    {   //play sfx and move position
                         me.audio.play("warppipe");
                         this.pos.x = 2271, 
                         this.pos.y = 589;
                     }
                 if(other.type === "TeleporterOut")
-                 {
+                 {  //play sfx and move position
                      me.audio.play("warppipe");
                      this.pos.x = 2336;
                      this.pos.y = 416;
                  }
+                //Temporary fix because powerups are not working, teleports mario onto secret level pipe
                 if(other.type === "TeleporterUp")
                  {
-                     
+                     //move position
                      this.pos.x = 2271;
                      this.pos.y = 137;
                  }
                 break;
                 case me.collision.types.ENEMY_OBJECT:
+                //item blocks are not working either, this makes them a solid entity
                 if(other.type === "ItemBlock")
                  {
-                     //other.type ="ItemBlockEmpty";
                      return true;
                  }
                 
@@ -176,13 +198,11 @@ game.PlayerEntity = me.Entity.extend({
                             this.body.vel.y = -this.body.maxVel.y * me.timer.tick;
                             
                             //set the jumping flag
-                            this.body.jumping = true;                           
-                        game.data.score +=100;      
-                        
-                        me.audio.play("stomp");
-                        
-                            //onDestroyEvent: function() {
-                        
+                            this.body.jumping = true;
+                            //Points from enemy death
+                            game.data.score +=100;      
+                            //Play sfx for enemy death
+                            me.audio.play("stomp");
                         
                         //make sure is not collected again
                         other.body.setCollisionMask(me.collision.types.NO_OBJECT);
@@ -210,9 +230,6 @@ game.PlayerEntity = me.Entity.extend({
                                 }
                             }
                         }
-                        
-                        
-
             default:
                     //Do not respond to other objects (e.g.Coins)
                     return false;
@@ -248,6 +265,7 @@ game.CoinEntity = me.CollectableEntity.extend({
         return false
     }
 });
+//One Up Power up entity
 game.OneUpEntity = me.CollectableEntity.extend({
 
      // extending the init function is not mandatory
@@ -257,9 +275,12 @@ game.OneUpEntity = me.CollectableEntity.extend({
         // call the  parent constructor
         
         var width = settings.width;
+        //set the image
         settings.image ="1-UP";
+        //set the settings of the frame
         settings.framewidth = settings.width = 16;
         settings.frameheight = settings.height = 16;
+        //call the constructor
         this._super(me.CollectableEntity, 'init', [x, y, settings]);
         
     },
@@ -291,8 +312,9 @@ game.LeafEntity = me.CollectableEntity.extend({
     //this function is called by the engine
     //an object is touched by something (here collected)
     onCollision : function (response, other){
-        //do something when collected
+        //Play sfx
         me.audio.play("powerup");
+        //Gain Points in score
         game.data.score +=100;
         //insert animation here  
         //make sure is not collected again
@@ -316,8 +338,9 @@ game.MushroomEntity = me.CollectableEntity.extend({
     //this function is called by the engine
     //an object is touched by something (here collected)
     onCollision : function (response, other){
-        //do something when collected
+        //Play sfx
         me.audio.play("powerup");
+        //Gain points for score
         game.data.score +=100;
         //insert animation here      
         //make sure is not collected again
@@ -349,9 +372,11 @@ game.MarioLevelSelectEntity = me.Entity.extend(
     init:function (x, y, settings) {
         // call the constructor
         this._super(me.Entity, 'init', [x, y, settings]);
-        
+        //set max velocity for x and y
         this.body.setMaxVelocity(1.5,1.5);
+        //set friction for player
         this.body.setFriction(0.4, 0);
+        //remove gravity for world select
         this.body.gravity = 0;
         
         //set the display to follow our position on both axis
@@ -377,7 +402,7 @@ game.MarioLevelSelectEntity = me.Entity.extend(
      */
     //Marios Movement and Keypressed Code
     update : function (dt) 
-    {
+    {   //move mario left on world select screen
         if(me.input.isKeyPressed('left'))
             {
                 this.body.force.x = -this.body.maxVel.x;
@@ -387,8 +412,9 @@ game.MarioLevelSelectEntity = me.Entity.extend(
                 this.renderable.setCurrentAnimation("walk");
                 }
             }
+            //move mario right on world select screen
             else if(me.input.isKeyPressed('right'))
-            {
+            {   //change to walking animation, move mario right on world select screen
                 this.body.force.x = this.body.maxVel.x;
                 if(!this.renderable.isCurrentAnimation("walk"))
                 {
@@ -397,7 +423,7 @@ game.MarioLevelSelectEntity = me.Entity.extend(
                 
             }
             else if(me.input.isKeyPressed('down'))
-            {
+            {   //change to walking animation,move mario down on world select screen
                 this.body.force.y = this.body.maxVel.y;
                 if(!this.renderable.isCurrentAnimation("walk"))
                 {
@@ -406,27 +432,22 @@ game.MarioLevelSelectEntity = me.Entity.extend(
                 
             }
             else
-            {
+            {   //stops mario and makes his animation stop
                 this.body.force.x = 0;
                 if(!this.renderable.isCurrentAnimation("stand"))
                 {
                 this.renderable.setCurrentAnimation("stand");
                 }
             }
+        //moves mario up in the world select screen
         if (me.input.isKeyPressed('jump'))
             if (!this.body.jumping && !this.body.falling && !this.body.jumping == 1)
-            {
-                // --- Sets Jumping to 0, so mario can jump
-                //this.body.jumping = 0;
-                // set current vel to the maximum defined value
-                // gravity will then do the rest
+            {   //moves mario up
                 this.body.force.y = -this.body.maxVel.y
             }
             else 
-            {
+            {   //stops marios movement
                 this.body.force.y = 0;
-                // --- Sets Jumping to 1, so Mario cant jump mid air
-                //this.body.jumping = 1;
             }
 
         // apply physics to the body (this moves the entity)
@@ -443,6 +464,7 @@ game.MarioLevelSelectEntity = me.Entity.extend(
      * colision handler
      * (called when colliding with other objects)
      */
+    //Mario world select only needs these collisions to react with the collisions set in tiled to navigate the world map.
     onCollision : function (response, other) {
         
         switch(response.b.body.collisionType)

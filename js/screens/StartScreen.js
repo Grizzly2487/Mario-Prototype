@@ -1,24 +1,39 @@
-game.StartScreen = me.ScreenObject.extend({
-    /**
-     *  action to perform on state change
-     */
-    onResetEvent: function() {
-        
-        me.levelDirector.loadLevel("");
+game.StartScreen = me.ScreenObject.extend(
+{
+  /**
+   * action to perform on state change
+   */
+  onResetEvent : function () 
+  {
+	me.levelDirector.loadLevel("title");
+    me.audio.play("SuperMarioRap");
+    this.HUD = new game.HUD.Container();
+    me.game.world.addChild(this.HUD);
+    // change to play state on press Enter or click/tap
+    me.input.bindKey(me.input.KEY.ENTER, "enter", true);
+    me.input.bindPointer(me.input.pointer.LEFT, me.input.KEY.ENTER);
+    this.handler = me.event.subscribe(me.event.KEYDOWN, function (action, keyCode, edge) 
+    {
+      if (action === "enter") 
+      {
+        // play something on tap / enter
+        // this will unlock audio on mobile devices
+        me.audio.stop("SuperMarioRap");
+        me.audio.play("cling");
+        me.audio.playTrack("World1BGM");
+        me.levelDirector.loadLevel("World Select");
+      }
+    });
+  },
 
-        // Add our HUD to the game world, add it last so that this is on top of the rest.
-        // Can also be forced by specifying a "Infinity" z value to the addChild function.
-        this.HUD = new game.HUD.Container();
-        me.game.world.addChild(this.HUD);
-        
-    },
-    
-
-    /**
-     *  action to perform when leaving this screen (state change)
-     */
-    onDestroyEvent: function() {
-        // remove the HUD from the game world
-        me.game.world.removeChild(this.HUD);
-    }
+  /**
+   * action to perform when leaving this screen (state change)
+   */
+  onDestroyEvent : function () 
+  {
+    me.input.unbindKey(me.input.KEY.ENTER);
+    me.input.unbindPointer(me.input.pointer.LEFT);
+    me.event.unsubscribe(this.handler);
+    me.game.world.removeChild(this.HUD);
+  }
 });
