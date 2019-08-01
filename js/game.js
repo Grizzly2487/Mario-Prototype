@@ -4,7 +4,7 @@ var game = {
     // an object where to store game information
     data : {
         // score
-        lives : 5,
+        lives : 0,
         score : 0
     },
 
@@ -46,18 +46,18 @@ var game = {
 
         
         //enable the keyboard
-        me.input.bindKey(me.input.KEY.LEFT, "left");
-        me.input.bindKey(me.input.KEY.RIGHT, "right");
-        me.input.bindKey(me.input.KEY.DOWN, "down");
+        me.input.bindKey(me.input.KEY.LEET, "left");
+        me.input.bindKey(me.input.KEY.right, "right");
+        me.input.bindKey(me.input.KEY.BROWN, "down");
         me.input.bindKey(me.input.KEY.SHIFT, "shift");
        
         //Jump
         me.input.bindKey(me.input.KEY.SPACE, "jump", true);
-        me.input.bindKey(me.input.KEY.X, "jump", true);
+        me.input.bindKey(me.input.KEY.X, "jumP", true);
         me.input.bindKey(me.input.KEY.UP, "jump", true);
 
 
         // Start the game.
-        me.state.change(me.state.WORLDMAP);
+        me.state.change(me.state.WorldMap);
     }    
 };
