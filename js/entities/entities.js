@@ -20,7 +20,7 @@ game.PlayerEntity = me.Entity.extend({
         
         //ensure that the player is updated even when outside of the viewport
         this.alwaysUpdate = true;
-        
+        this.isAlive = true;
         
         //TODO: Add Animation to player
         
@@ -192,15 +192,25 @@ game.PlayerEntity = me.Entity.extend({
                         
                         }
                         else
-                        {
+                        {   //Mario gets hit and flickers
                             this.renderable.flicker(300);
-                            //me.levelDirector.loadLevel("Mario-Prototype");
-					        //game.data.lives -= 1;
+                            if(this.isAlive == true)
+                            {   //if marios lives reach below 0 resets the game
+                                this.isAlive = false;
+                                if (game.data.lives === 0)
+                                {
+                                    game.data.lives = 5;
+                                    game.data.score = 0;
+                                    me.levelDirector.loadLevel("World Select");
+                                }
+                                else
+                                {   //When mario has lost a life
+                                    me.levelDirector.loadLevel("Mario-Prototype");
+                                    game.data.lives -= 1;
+                                }
+                            }
                         }
-                        //if (game.data.lives === 0)
-                        //{
-                            //me.levelDirector.loadLevel("World Select");
-                        //}
+                        
                         
 
             default:
@@ -213,7 +223,7 @@ game.PlayerEntity = me.Entity.extend({
     
     }
 });
-
+//The Coin objects code
 game.CoinEntity = me.CollectableEntity.extend({
 
      // extending the init function is not mandatory
@@ -268,6 +278,7 @@ game.OneUpEntity = me.CollectableEntity.extend({
         return false;
     }
 });
+//Leaf entities code
 game.LeafEntity = me.CollectableEntity.extend({
 
      // extending the init function is not mandatory
@@ -292,6 +303,7 @@ game.LeafEntity = me.CollectableEntity.extend({
         return false
     }
 });
+//Mushroom entities code
 game.MushroomEntity = me.CollectableEntity.extend({
 
      // extending the init function is not mandatory
@@ -316,7 +328,8 @@ game.MushroomEntity = me.CollectableEntity.extend({
             
         return false
     }
-});       
+});
+//Item Blocks code(didn't end up getting this working)
 game.ItemBlocksEntity = me.Entity.extend({
     /**
      * constructor
@@ -327,6 +340,7 @@ game.ItemBlocksEntity = me.Entity.extend({
         this._super(me.Entity, 'init', [x, y , settings]);
     }
 });
+//Marios World Select Entity code
 game.MarioLevelSelectEntity = me.Entity.extend(
 {
     /**
@@ -349,9 +363,9 @@ game.MarioLevelSelectEntity = me.Entity.extend(
         
         //TODO: Add Animation to player
         
-        //define a basic animation (using all frames)
+        //Walking Animation (using all frames)
         this.renderable.addAnimation("walk", [0,1])
-        
+        //Standing Animation
         this.renderable.addAnimation("stand", [0])
         
         //set standing animation as default  
@@ -361,7 +375,7 @@ game.MarioLevelSelectEntity = me.Entity.extend(
     /**
      * update the entity
      */
-
+    //Marios Movement and Keypressed Code
     update : function (dt) 
     {
         if(me.input.isKeyPressed('left'))
