@@ -39,8 +39,10 @@ game.PlayerEntity = me.Entity.extend({
 
     update : function (dt) 
     {
+        //change to running animation
         if(me.input.isKeyPressed('run'))
         {
+            //update enemy velocity
             this.body.setMaxVelocity(2.5,18);
             this.body.setFriction(0.4,0.3);
         }
