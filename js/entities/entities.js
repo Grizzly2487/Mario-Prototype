@@ -281,6 +281,7 @@ game.LeafEntity = me.CollectableEntity.extend({
     //an object is touched by something (here collected)
     onCollision : function (response, other){
         //do something when collected
+        me.audio.play("powerup");
         game.data.score +=100;
         //insert animation here  
         //make sure is not collected again
@@ -304,6 +305,7 @@ game.MushroomEntity = me.CollectableEntity.extend({
     //an object is touched by something (here collected)
     onCollision : function (response, other){
         //do something when collected
+        me.audio.play("powerup");
         game.data.score +=100;
         //insert animation here      
         //make sure is not collected again
