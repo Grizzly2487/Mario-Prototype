@@ -6,7 +6,6 @@ game.StartScreen = me.ScreenObject.extend(
   onResetEvent : function () 
   {
 	me.levelDirector.loadLevel("title");
-    me.audio.play("SuperMarioRap");
     this.HUD = new game.HUD.Container();
     me.game.world.addChild(this.HUD);
     // change to play state on press Enter or click/tap
@@ -18,7 +17,6 @@ game.StartScreen = me.ScreenObject.extend(
       {
         // play something on tap / enter
         // this will unlock audio on mobile devices
-        me.audio.stop("SuperMarioRap");
         me.audio.play("cling");
         me.audio.playTrack("World1BGM");
         me.levelDirector.loadLevel("World Select");
