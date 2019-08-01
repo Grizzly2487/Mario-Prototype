@@ -132,16 +132,19 @@ game.PlayerEntity = me.Entity.extend({
                  }
                 if(other.type === "TeleporterIn" && me.input.isKeyPressed('down'))
                     {
+                        me.audio.play("warppipe");
                         this.pos.x = 2271, 
                         this.pos.y = 589;
                     }
                 if(other.type === "TeleporterOut")
                  {
+                     me.audio.play("warppipe");
                      this.pos.x = 2336;
                      this.pos.y = 416;
                  }
                 if(other.type === "TeleporterUp")
                  {
+                     
                      this.pos.x = 2271;
                      this.pos.y = 137;
                  }
@@ -246,6 +249,7 @@ game.OneUpEntity = me.CollectableEntity.extend({
     {
         //do something when collected
          game.data.lives +=1;      
+         me.audio.play("1up");
         //make sure is not collected again
         this.body.setCollisionMask(me.collision.types.NO_OBJECT);
         //remove it
