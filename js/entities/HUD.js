@@ -18,7 +18,7 @@ game.HUD.Container = me.Container.extend({
         this.floating = true;
 
         // give a name
-        this.name = "HuD";
+        this.name = "HUD";
 
         // add our child score object at the top left corner
         this.addChild(new game.HUD.ScoreItem(5, 5));
@@ -132,12 +132,12 @@ game.HUD.LivesItem = me.Renderable.extend({
     /**
      * draw the score
      */
-    draw : function (contact) {
+    draw : function (context) {
         // draw it baby !
          //this.pos.x, this.pos.y are the relative position from the screen right bottom
         //placement of the text
-        this.font.draw(contact, game.data.lives, 240, 25);
-        this.font.draw(contact, "Lives", 220, 25);
+        this.font.draw(context, game.data.lives, 240, 25);
+        this.font.draw(context, "Lives", 220, 25);
         
       
     }
