@@ -35,6 +35,7 @@ var game = {
         // add our player/enemy/powerup/coin and object entities into the entity pool
         me.pool.register("Mario", game.PlayerEntity);       
         me.pool.register("Goomba", game.GoombaEntity);
+        me.pool.register("FlyingGoomba", game.FlyingGoombaEntity);
         me.pool.register("Coins", game.CoinEntity);
         me.pool.register("Turtle", game.KoopaEntity);
         me.pool.register("ItemBlocks", game.ItemBlocksEntity);
