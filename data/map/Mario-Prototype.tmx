@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.2" tiledversion="1.2.4" orientation="orthogonal" renderorder="right-down" width="178" height="46" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#ffffff" nextlayerid="20" nextobjectid="392">
+<map version="1.2" tiledversion="1.2.4" orientation="orthogonal" renderorder="right-down" width="178" height="46" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#ffffff" nextlayerid="20" nextobjectid="397">
  <tileset firstgid="1" source="Super_Mario_3_Mario_World1_Map1.tsx"/>
  <tileset firstgid="8011" source="sma4_tiles.tsx"/>
  <tileset firstgid="9361" source="BreakableBlocks.tsx"/>
@@ -45,7 +45,7 @@
     <property name="image" value="Boxes"/>
    </properties>
   </object>
-  <object id="296" name="ItemBlocks" type="ItemBlock" x="656.333" y="431.833" width="16" height="16">
+  <object id="296" name="ItemBlocks" type="ItemBlock" x="656.333" y="432.416" width="16" height="16">
    <properties>
     <property name="framewidth" value="16"/>
     <property name="image" value="Boxes"/>
@@ -84,28 +84,25 @@
    <polygon points="0.333333,0.666667 0,58.9804 0,64 31.3333,64.3333 31.6667,0.588233"/>
   </object>
   <object id="17" x="1504.33" y="383.667">
-   <polygon points="0,0 31,1 31,16 0,16"/>
+   <polygon points="-0.666667,1 31,1 31,16 0,16"/>
   </object>
-  <object id="20" x="1569" y="449">
-   <polygon points="0,0 44,1 45,31 0,30"/>
+  <object id="20" x="1568.33" y="448.333">
+   <polygon points="0,0 47,0.333333 47,31 0,31"/>
   </object>
   <object id="21" x="1584" y="432">
-   <polygon points="0,0 31,1 32,28 0,29"/>
+   <polygon points="0,0 31,0.333333 31.3333,28.6667 0,29"/>
   </object>
   <object id="23" x="1600" y="416">
    <polygon points="0,0 16,0 16,31 0.333333,31.0625"/>
   </object>
   <object id="24" x="1665" y="415">
-   <polygon points="-0.333333,0 14,0 14,31 0,31.5098"/>
+   <polygon points="-0.666666,0 14,0 14,31 -0.333333,31.5098"/>
   </object>
   <object id="25" x="1665" y="431">
-   <polygon points="0,1 30,1.0625 30,33 0,33"/>
+   <polygon points="0,1 29.6667,0.729167 30,33 0,33"/>
   </object>
   <object id="26" x="1664" y="447">
-   <polygon points="0,1 47,1.27083 47,31 -1,31"/>
-  </object>
-  <object id="41" x="2255" y="159">
-   <polygon points="0,0 1,209 33,209 33,197 33,0"/>
+   <polygon points="0,1 47,0.937497 47,31 -0.25,31.6667"/>
   </object>
   <object id="42" x="2256" y="415">
    <polygon points="0,0 31,0 31,65 0,65"/>
@@ -161,9 +158,6 @@
   <object id="65" x="2319.67" y="431">
    <polygon points="0,0 32,0 32,47.6667 0,47.6667"/>
   </object>
-  <object id="195" x="2845" y="480">
-   <polygon points="0,0 -1,-496 20,-496 22,1"/>
-  </object>
   <object id="196" x="2275" y="-15">
    <polygon points="0,0 590,0 590,15 -1,14"/>
   </object>
@@ -178,9 +172,6 @@
   </object>
   <object id="200" x="-28" y="-17">
    <polygon points="0,0 590,0 590,15 -1,14"/>
-  </object>
-  <object id="201" x="2" y="-16">
-   <polygon points="0,0 -3,496 -32,496 -31,-3"/>
   </object>
   <object id="203" type="platform" x="1488" y="225" width="207" height="17.3333"/>
   <object id="204" type="platform" x="1408" y="240" width="63" height="18"/>
@@ -220,6 +211,15 @@
   <object id="378" type="DeathCollider" x="1583.33" y="482" width="119.333" height="42.6667"/>
   <object id="379" type="DeathCollider" x="2185.33" y="481.333" width="119.333" height="42.6667"/>
   <object id="380" type="DeathCollider" x="1824.67" y="446.667" width="31.3333" height="17.3333"/>
+  <object id="392" x="2256.5" y="160">
+   <polygon points="0,0 31,0 31,207.375 0,207.375"/>
+  </object>
+  <object id="395" x="2847.67" y="-15">
+   <polygon points="0,0 32,0 32,502.667 0,502.667"/>
+  </object>
+  <object id="396" x="-34.33" y="-14">
+   <polygon points="0,0 32,0 32,502.667 0,502.667"/>
+  </object>
  </objectgroup>
  <objectgroup id="10" name="Entity">
   <object id="127" name="Mario" type="mainPlayer" x="15" y="431">
@@ -264,32 +264,18 @@
     <property name="image" value="Turtle"/>
    </properties>
   </object>
-  <object id="321" name="Goomba" type="Goomba" x="408" y="440.667" width="95.6667" height="15.6667">
+  <object id="321" name="Goomba" type="Goomba" x="408.25" y="446.167" width="95.6667" height="15.6667">
    <properties>
     <property name="frameheight" value="16"/>
     <property name="framewidth" value="16"/>
     <property name="image" value="Goomba"/>
    </properties>
   </object>
-  <object id="322" name="Goomba" type="Goomba" x="736" y="426" width="144.667" height="15.6667">
+  <object id="322" name="FlyingGoomba" type="FlyingGoomba" x="736" y="426" width="144.667" height="15.6667">
    <properties>
-    <property name="frameheight" value="16"/>
-    <property name="framewidth" value="16"/>
-    <property name="image" value="Goomba"/>
-   </properties>
-  </object>
-  <object id="323" name="Goomba" type="Goomba" x="895.667" y="425" width="144.667" height="15.6667">
-   <properties>
-    <property name="frameheight" value="16"/>
-    <property name="framewidth" value="16"/>
-    <property name="image" value="Goomba"/>
-   </properties>
-  </object>
-  <object id="324" name="Goomba" type="Goomba" x="2570.67" y="432.667" width="95.6667" height="15.6667">
-   <properties>
-    <property name="frameheight" value="16"/>
-    <property name="framewidth" value="16"/>
-    <property name="image" value="Goomba"/>
+    <property name="frameheight" value="27"/>
+    <property name="framewidth" value="20"/>
+    <property name="image" value="Flying Goomba"/>
    </properties>
   </object>
   <object id="325" name="PirhanaPlant" x="1799" y="406.666" width="16" height="62">
@@ -302,6 +288,20 @@
    <properties>
     <property name="framewidth" value="16"/>
     <property name="image" value="PirhanaPlant"/>
+   </properties>
+  </object>
+  <object id="393" name="FlyingGoomba" type="FlyingGoomba" x="901" y="425" width="144.667" height="15.6667">
+   <properties>
+    <property name="frameheight" value="27"/>
+    <property name="framewidth" value="20"/>
+    <property name="image" value="Flying Goomba"/>
+   </properties>
+  </object>
+  <object id="394" name="FlyingGoomba" type="FlyingGoomba" x="2526" y="438" width="144.667" height="15.6667">
+   <properties>
+    <property name="frameheight" value="27"/>
+    <property name="framewidth" value="20"/>
+    <property name="image" value="Flying Goomba"/>
    </properties>
   </object>
  </objectgroup>
@@ -511,7 +511,7 @@
     <property name="image" value="Leaf"/>
    </properties>
   </object>
-  <object id="370" name="Leaf" type="Collectable" x="656.5" y="414.5" width="16" height="16">
+  <object id="370" name="Leaf" type="Collectable" x="656.5" y="413.5" width="16" height="16">
    <properties>
     <property name="image" value="Leaf"/>
    </properties>
